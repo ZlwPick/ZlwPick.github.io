@@ -19,7 +19,7 @@
 <meta property="og:description" content="Reverse Integer题目描述:给定一个32位有符号整数，将整数中的数字进行反转 示例1:输入:123输入:321">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-21T09:48:23.221Z">
+<meta property="og:updated_time" content="2019-10-21T14:02:59.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 7.Reverse Integer">
 <meta name="twitter:description" content="Reverse Integer题目描述:给定一个32位有符号整数，将整数中的数字进行反转 示例1:输入:123输入:321">
@@ -145,7 +145,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 151 个字)
+                    1 分钟 读完 (大约 153 个字)
                 </span>
                 
                 
@@ -165,7 +165,7 @@
 <p><strong>示例2:</strong><br><strong>输入:</strong>-123<br><strong>输入:</strong>-321</p>
 <p><strong>示例3:</strong><br><strong>输入:</strong>120<br><strong>输入:</strong>21</p>
 <p><strong>注意:</strong><br>假设我们的环境只能存储32位有符号整数，其数值范围是[-2^31 , 2^31 -1],如果反转后的整数溢出，返回0.</p>
-<figure class="highlight plain hljs"><figcaption><span>[1]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static int Solution(int x)&#123;</span><br><span class="line">    int rev = 0;</span><br><span class="line">    while (x!=0)&#123;</span><br><span class="line">        int pop = x % 10;  // 取x的最后一位</span><br><span class="line">        x /= 10;           // 删除X的最后一位</span><br><span class="line">        if(rev &gt; Integer.MAX_VALUE / 10 || rev &lt; Integer.MIN_VALUE /10)  //溢出判断</span><br><span class="line">            return 0;</span><br><span class="line">        rev = rev * 10 + pop; //之前的数值向前推进1位加上当前数</span><br><span class="line">    &#125;</span><br><span class="line">    return rev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Solution</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> rev = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span> (x!=<span class="hljs-number">0</span>)&#123;</span><br><span class="line">        <span class="hljs-keyword">int</span> pop = x % <span class="hljs-number">10</span>;  <span class="hljs-comment">// 取x的最后一位</span></span><br><span class="line">        x /= <span class="hljs-number">10</span>;           <span class="hljs-comment">// 删除X的最后一位</span></span><br><span class="line">        <span class="hljs-keyword">if</span>(rev &gt; Integer.MAX_VALUE / <span class="hljs-number">10</span> || rev &lt; Integer.MIN_VALUE /<span class="hljs-number">10</span>)  <span class="hljs-comment">//溢出判断</span></span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">        rev = rev * <span class="hljs-number">10</span> + pop; <span class="hljs-comment">//之前的数值向前推进1位加上当前数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> rev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><a href="https://zlwblog.cn" target="_blank" rel="noopener">https://zlwblog.cn</a></p>
 
