@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>算法的知识体系</title>
+      <link href="/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+      <url>/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</url>
+      
+        <content type="html"><![CDATA[<p>算法：<br>1、排序算法：快速排序、归并排序、计数排序<br>2、搜索算法：回溯、递归、剪枝<br>3、图论：最短路径、最小生成树、网络流建模<br>4、动态规划：背包问题、最长子序列、计数问题<br>5、基础技巧：分治、倍增、二分法、贪心算法</p><a id="more"></a><p>数据结构：<br>1、数组和链表<br>2、栈与队列<br>3、树和图<br>4、哈希表<br>5、大/小跟堆，可并堆<br>6、字符串：字典树、后缀树</p><p><img src="/images/alg-overview.png" alt></p><h1 id="两个刷算法题的网站"><a href="#两个刷算法题的网站" class="headerlink" title="两个刷算法题的网站"></a>两个刷算法题的网站</h1><ul><li><a href="https://leetcode-cn.com/problemset/all/" target="_blank" rel="noopener">https://leetcode-cn.com/problemset/all/</a></li><li><a href="https://www.lintcode.com/problem/" target="_blank" rel="noopener">https://www.lintcode.com/problem/</a></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo+coding+github加速博客访问</title>
       <link href="/2019/10/24/Hexo-coding-github%E5%8A%A0%E9%80%9F%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE/"/>
       <url>/2019/10/24/Hexo-coding-github%E5%8A%A0%E9%80%9F%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE/</url>

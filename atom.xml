@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>zlwdeboke</title>
+  <title>zlwblog</title>
   
-  <subtitle>zlwzlwzlw</subtitle>
+  <subtitle>zlwblog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-24T05:51:02.802Z</updated>
+  <updated>2019-10-24T06:13:52.502Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法的知识体系</title>
+    <link href="http://yoursite.com/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    <id>http://yoursite.com/2019/10/24/算法的知识体系/</id>
+    <published>2019-10-24T06:01:26.000Z</published>
+    <updated>2019-10-24T06:13:52.502Z</updated>
+    
+    <content type="html"><![CDATA[<p>算法：<br>1、排序算法：快速排序、归并排序、计数排序<br>2、搜索算法：回溯、递归、剪枝<br>3、图论：最短路径、最小生成树、网络流建模<br>4、动态规划：背包问题、最长子序列、计数问题<br>5、基础技巧：分治、倍增、二分法、贪心算法</p><a id="more"></a><p>数据结构：<br>1、数组和链表<br>2、栈与队列<br>3、树和图<br>4、哈希表<br>5、大/小跟堆，可并堆<br>6、字符串：字典树、后缀树</p><p><img src="/images/alg-overview.png" alt></p><h1 id="两个刷算法题的网站"><a href="#两个刷算法题的网站" class="headerlink" title="两个刷算法题的网站"></a>两个刷算法题的网站</h1><ul><li><a href="https://leetcode-cn.com/problemset/all/" target="_blank" rel="noopener">https://leetcode-cn.com/problemset/all/</a></li><li><a href="https://www.lintcode.com/problem/" target="_blank" rel="noopener">https://www.lintcode.com/problem/</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;算法：&lt;br&gt;1、排序算法：快速排序、归并排序、计数排序&lt;br&gt;2、搜索算法：回溯、递归、剪枝&lt;br&gt;3、图论：最短路径、最小生成树、网络流建模&lt;br&gt;4、动态规划：背包问题、最长子序列、计数问题&lt;br&gt;5、基础技巧：分治、倍增、二分法、贪心算法&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo+coding+github加速博客访问</title>
