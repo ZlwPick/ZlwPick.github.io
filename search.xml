@@ -4,12 +4,56 @@
   
     
     <entry>
+      <title>Java 8 - 函数编程（lambda表达式）</title>
+      <link href="/2019/10/25/Java-8-%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%EF%BC%88lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
+      <url>/2019/10/25/Java-8-%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%EF%BC%88lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h1><p><strong>超过3行的逻辑就不适用Lambda表达式了</strong>。虽然看着很先进，其实Lambda表达式的本质只是一个”语法糖(用更简练的言语表达较复杂的含义)”,由编译器推断并帮你转换包装为常规的代码,因此你可以使用更少的代码来实现同样的功能。本人建议不要乱用,因为这就和某些很高级的黑客写的代码一样,简洁,难懂,难以调试,维护人员想骂娘.)<br>Lambda表达式是Java SE 8中一个重要的新特性。lambda表达式允许你通过表达式来代替功能接口.lambda表达式就和方法一样,它提供了一个正常的参数列表和一个使用这些参数的主体(body,可以是一个表达式或一个代码块)。</p><a id="more"></a><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a><strong>基本语法</strong></h3><blockquote><p><font color="orange">(parameters) -&gt; expression</font><br>或(请注意语句的花括号)<br><font color="green">(parameters) -&gt; {expression}</font></p></blockquote><figure class="highlight java hljs"><figcaption><span>[lmabda简单例子]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 1.不需要参数 返回值 7</span></span><br><span class="line">() -&gt; <span class="hljs-number">7</span></span><br><span class="line"><span class="hljs-comment">// 2. 接受两个int类型参数 返回值 为 两者之和</span></span><br><span class="line">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y) -&gt; x+y</span><br><span class="line"><span class="hljs-comment">// 3. 接受一个string类型参数,并进行打印,没有返回值</span></span><br><span class="line">(String s) -&gt; System.out.print(s)</span><br></pre></td></tr></table></figure><figure class="highlight java hljs"><figcaption><span>[循环输出]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 随便定义的数据</span></span><br><span class="line">        String[] str = &#123;<span class="hljs-string">"zlw"</span>,<span class="hljs-string">"joe"</span>,<span class="hljs-string">"qjl"</span>,<span class="hljs-string">"lxl"</span>,<span class="hljs-string">"zc"</span>,<span class="hljs-string">"sam"</span>&#125;;</span><br><span class="line">        List&lt;String&gt; players = Arrays.asList(str);</span><br><span class="line">        <span class="hljs-comment">// 以前的循环方式</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (String player : players) &#123;</span><br><span class="line">            System.out.println(player);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="hljs-string">"--------------"</span>);</span><br><span class="line">        <span class="hljs-comment">// 使用 lambda 表达式以及函数操作(functional operation)</span></span><br><span class="line">        players.forEach((player) -&gt; System.out.println(player));</span><br><span class="line">        System.out.println(<span class="hljs-string">"--------------"</span>);</span><br><span class="line">        <span class="hljs-comment">// 在 Java 8 中使用双冒号操作符(double colon operator)</span></span><br><span class="line">        players.forEach(System.out::println);</span><br></pre></td></tr></table></figure><figure class="highlight java hljs"><figcaption><span>[使用lambdas 来实现 Runnable接口]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 使用匿名内部类 1.1</span></span><br><span class="line">        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="hljs-meta">@Override</span></span><br><span class="line">            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="hljs-string">"Hello lmabda1"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"><span class="hljs-comment">// 使用 lambda 表达式1.2</span></span><br><span class="line">        <span class="hljs-keyword">new</span> Thread(() -&gt; System.out.println(<span class="hljs-string">"Hello lmabda2"</span>)).start();</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 使用匿名内部类 2.1</span></span><br><span class="line">        Runnable hello_zlw_lmabda1 = <span class="hljs-keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="hljs-meta">@Override</span></span><br><span class="line">            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="hljs-string">"Hello zlw lmabda1"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"><span class="hljs-comment">// 使用 lambda 表达式2.2</span></span><br><span class="line">        Runnable hello_zlw_lmabda2 = () -&gt; System.out.println(<span class="hljs-string">"Hello zlw lmabda2"</span>);</span><br><span class="line">        </span><br><span class="line">        hello_zlw_lmabda1.run();</span><br><span class="line">        hello_zlw_lmabda2.run();</span><br></pre></td></tr></table></figure><p><strong>使用Lambdas排序集合</strong><br>在Java中,Comparator 类被用来排序集合。 在下面的例子中,我们将根据球员的 name, surname, name 长度 以及最后一个字母。 和前面的示例一样,先使用匿名内部类来排序,然后再使用lambda表达式精简我们的代码。</p><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 1.1 使用匿名内部类根据 name 排序</span></span><br><span class="line">String[] players = &#123;<span class="hljs-string">"zlw"</span>,<span class="hljs-string">"joe"</span>,<span class="hljs-string">"qjl"</span>,<span class="hljs-string">"lxl"</span>,<span class="hljs-string">"zc"</span>,<span class="hljs-string">"sam"</span>&#125;;</span><br><span class="line">Arrays.sort(players, <span class="hljs-keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> (o1.compareTo(o2));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 使用 lambda 表达式以及函数操作(functional operation)</span></span><br><span class="line">Comparator&lt;String&gt; sortName = (String o1, String o2) -&gt; o1.compareTo(o2);</span><br><span class="line">Arrays.sort(players,sortName);</span><br><span class="line"></span><br><span class="line">Arrays.sort(players,(String o1,String o2) -&gt; o1.compareTo(o2));</span><br><span class="line">System.out.println(Arrays.toString(players));</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>平时看的好文章</title>
+      <link href="/2019/10/24/%E5%B9%B3%E6%97%B6%E7%9C%8B%E7%9A%84%E5%A5%BD%E6%96%87%E7%AB%A0/"/>
+      <url>/2019/10/24/%E5%B9%B3%E6%97%B6%E7%9C%8B%E7%9A%84%E5%A5%BD%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<p>技术人员的发展之路 –陈皓<br><a href="https://coolshell.cn/articles/17583.html" target="_blank" rel="noopener">https://coolshell.cn/articles/17583.html</a></p><a id="more"></a>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法的知识体系</title>
       <link href="/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
       <url>/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</url>
       
         <content type="html"><![CDATA[<p>算法：<br>1、排序算法：快速排序、归并排序、计数排序<br>2、搜索算法：回溯、递归、剪枝<br>3、图论：最短路径、最小生成树、网络流建模<br>4、动态规划：背包问题、最长子序列、计数问题<br>5、基础技巧：分治、倍增、二分法、贪心算法</p><a id="more"></a><p>数据结构：<br>1、数组和链表<br>2、栈与队列<br>3、树和图<br>4、哈希表<br>5、大/小跟堆，可并堆<br>6、字符串：字典树、后缀树</p><p><img src="/images/alg-overview.png" alt></p><h1 id="两个刷算法题的网站"><a href="#两个刷算法题的网站" class="headerlink" title="两个刷算法题的网站"></a>两个刷算法题的网站</h1><ul><li><a href="https://leetcode-cn.com/problemset/all/" target="_blank" rel="noopener">https://leetcode-cn.com/problemset/all/</a></li><li><a href="https://www.lintcode.com/problem/" target="_blank" rel="noopener">https://www.lintcode.com/problem/</a></li></ul>]]></content>
       
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
       
       
     </entry>
