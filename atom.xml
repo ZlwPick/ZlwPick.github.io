@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-01T15:24:29.145Z</updated>
+  <updated>2019-11-03T14:31:45.001Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux 学习日志-4</title>
+    <link href="http://yoursite.com/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/"/>
+    <id>http://yoursite.com/2019/11/03/Linux-学习日志-4/</id>
+    <published>2019-11-03T14:30:54.000Z</published>
+    <updated>2019-11-03T14:31:45.001Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 学习日志-3</title>
     <link href="http://yoursite.com/2019/11/01/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-3/"/>
     <id>http://yoursite.com/2019/11/01/Linux-学习日志-3/</id>
     <published>2019-11-01T01:27:11.000Z</published>
-    <updated>2019-11-01T15:24:29.145Z</updated>
+    <updated>2019-11-03T13:55:12.681Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Linux目录管理"><a href="#Linux目录管理" class="headerlink" title="Linux目录管理"></a><strong>Linux目录管理</strong></h3><p>绝对路径:[一定由根目录/写起] (比起正确性比相对路径要好!)<br>相对路径:[不是由/写起]</p><a id="more"></a><blockquote><p>. 　　 (代表此层目录 )<br>.. 　　 (代表上一层目录 )<br>- 　　 (代表签一个工作目录 )<br>~ 　　 (代表[当前用户身份]所在的家目录 )<br>~zlw 　(代表zlw这个用户的家目录 )</p></blockquote><h3 id="常用的处理目录指令"><a href="#常用的处理目录指令" class="headerlink" title="常用的处理目录指令"></a>常用的处理目录指令</h3><p>cd 变换目录</p><p>pwd 显示当前目录</p><p>mkdir 建立一个新的目录<br>[-m]创建目录的时候直接设定权限<br>[-p]直接将要创建所需要的目录递归建立起来! example:<br>mkdir -p text1/text2/text3<br>ls -ld test*</p><p>rmdir 删除一个空的目录<br>[-p] 连同[上层][空的]目录一起删除<br><strong><font color="red">被删除的目录里面必定不能存在其他的目录或者文件!</font></strong></p><p>为什么我可以在任何地方执行/bin/ls 这个指令?<br>是因为环境变量$PATH 指定了/bin/ls,若把ls文件移入到/root下,则无法使用ls指令,可以<br>PATH=”${PATH}:/root” 加入到执行文件搜寻路径PATH中</p><h3 id="文件与目录是检视-ls"><a href="#文件与目录是检视-ls" class="headerlink" title="文件与目录是检视: ls"></a>文件与目录是检视: <strong>ls</strong></h3><p><font color="red">[-a] 显示全部文件,包括隐藏档,包括(.)(..)</font><br>[-A]　　 显示全部文件,包括隐藏档,不包括(.)(..)<br><font color="red">[-d]　　 仅列出目录本身,不是目录下的文件数据</font><br>[-r]　　 直接列出结果,不排序(ls会以档名排序)<br>[-h]　　 文件容量以人类易读的方式(GB KB)列出来<br>[-i] 　　列出inode 号码，<br>[-F] 　　根据文件,目录等信息,给予附加数据结构<br><font color="red">[-l] 　　长数据串行出</font><br>[-S] 　　以文件容量大小排序<br>[-r] 　　反序输出<br>[-t] 　　以时间排序<br>[-R] 　　连同子目录一起列出来,等于输出显示所有文件<br>[-n]　　 列出UID跟GID,(而不是使用者跟群组)<br>–color=never 不根据文件特性给予颜色显示<br>–color=always 显示颜色<br>–color=auto 系统自动判断<br>–full–time 以完整的时间模式(年月日时分)输出</p><h3 id="复制-cp"><a href="#复制-cp" class="headerlink" title="复制 cp"></a>复制 <strong>cp</strong></h3><p>cp 　 [-adfilprsu] 　 来源文件(source) 　目标文件(destination)<br>cp 　[options] 　source1 　source2 　source3… 　directory<br><font color="red">[-a] 　　相当于-dr –preserve=all的意思</font><br>[-d] 　　若来源文件为链接文件的属性(link file),则复制链接文件属性而非文件本身<br>[-f] 　　强制(force),若目标文件已经存在且无法开启,则移除后再尝试一次<br><font color="red">[-i] 　　目标文件存在,覆盖之前询问</font><br>[-l] 　　进行硬链接(hard link)的连档建立,而非复制文件本身<br><font color="red">[-p] 　　连同文件的属性(权限,用户,时间)一起复制,而非使用默认属性</font><br><font color="red">[-r] 　　递归持续复制,用于目录的复制行为</font><br>[-s] 　　复制成为符号链接文件(symbolic link),亦即[快捷方式]文件<br>[-u] 　　destination 比 source 旧才跟新 destination,或者destination 不存在的情况下才复制</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Linux目录管理"><a href="#Linux目录管理" class="headerlink" title="Linux目录管理"></a><strong>Linux目录管理</strong></h3><p>绝对路径:[一定由根目录/写起] (比起正确性比相对路径要好!)<br>相对路径:[不是由/写起]</p><a id="more"></a><blockquote><p>. 　　 (代表此层目录 )<br>.. 　　 (代表上一层目录 )<br>- 　　 (代表签一个工作目录 )<br>~ 　　 (代表[当前用户身份]所在的家目录 )<br>~zlw 　(代表zlw这个用户的家目录 )</p></blockquote><h3 id="常用的处理目录指令"><a href="#常用的处理目录指令" class="headerlink" title="常用的处理目录指令"></a>常用的处理目录指令</h3><p>cd 变换目录</p><p>pwd 显示当前目录</p><p>mkdir 建立一个新的目录<br>[-m]创建目录的时候直接设定权限<br>[-p]直接将要创建所需要的目录递归建立起来! example:<br>mkdir -p text1/text2/text3<br>ls -ld test*</p><p>rmdir 删除一个空的目录<br>[-p] 连同[上层][空的]目录一起删除<br><strong><font color="red">被删除的目录里面必定不能存在其他的目录或者文件!</font></strong></p><p>为什么我可以在任何地方执行/bin/ls 这个指令?<br>是因为环境变量$PATH 指定了/bin/ls,若把ls文件移入到/root下,则无法使用ls指令,可以<br>PATH=”${PATH}:/root” 加入到执行文件搜寻路径PATH中</p><h2 id="文件与目录是检视-ls"><a href="#文件与目录是检视-ls" class="headerlink" title="文件与目录是检视: ls"></a>文件与目录是检视: <strong>ls</strong></h2><p><font color="red">[-a] 显示全部文件,包括隐藏档,包括(.)(..)</font><br>[-A]　　 显示全部文件,包括隐藏档,不包括(.)(..)<br><font color="red">[-d]　　 仅列出目录本身,不是目录下的文件数据(查询目录需要加)</font><br>[-r]　　 直接列出结果,不排序(ls会以档名排序)<br>[-h]　　 文件容量以人类易读的方式(GB KB)列出来<br>[-i] 　　列出inode 号码，<br>[-F] 　　根据文件,目录等信息,给予附加数据结构<br><font color="red">[-l] 　　长数据串行出</font><br>[-S] 　　以文件容量大小排序<br>[-r] 　　反序输出<br>[-t] 　　以时间排序<br>[-R] 　　连同子目录一起列出来,等于输出显示所有文件<br>[-n]　　 列出UID跟GID,(而不是使用者跟群组)<br>–color=never 不根据文件特性给予颜色显示<br>–color=always 显示颜色<br>–color=auto 系统自动判断<br>–full–time 以完整的时间模式(年月日时分)输出</p><h3 id="复制-cp"><a href="#复制-cp" class="headerlink" title="复制 cp"></a>复制 <strong>cp</strong></h3><p>cp 　 [-adfilprsu] 　 来源文件(source) 　目标文件(destination)<br>cp 　[options] 　source1 　source2 　source3… 　directory<br><font color="red">[-a] 　　相当于-dr –preserve=all的意思</font><br>[-d] 　　若来源文件为链接文件的属性(link file),则复制链接文件属性而非文件本身<br>[-f] 　　强制(force),若目标文件已经存在且无法开启,则移除后再尝试一次<br><font color="red">[-i] 　　目标文件存在,覆盖之前询问</font><br>[-l] 　　进行硬链接(hard link)的连档建立,而非复制文件本身<br><font color="red">[-p] 　　连同文件的属性(权限,用户,时间)一起复制,而非使用默认属性</font><br><font color="red">[-r] 　　递归持续复制,用于目录的复制行为</font><br>[-s] 　　复制成为符号链接文件(symbolic link),亦即[快捷方式]文件<br>[-u] 　　destination 比 source 旧才跟新 destination,或者destination 不存在的情况下才复制</p><h3 id="移除-rm"><a href="#移除-rm" class="headerlink" title="移除 rm"></a>移除 <strong>rm</strong></h3><p>rm [-fir] 文件或目录<br>[-f] 强制删除,忽略不存在的文件,不会出现警告<br>[-i] 询问<br>[-r] 递归删除! rm -r /tmp/etc<br>如果身份是root ,预计加入 -i 的选项,需要一直按y才会删除<br>可以按[Ctrl] + c 结束<br>这是一种保护动作,如果不需要<br>\rm -r /tmp/etc<br>删除档名第一个字符有[-] -aaa- 因为’-‘是选项,系统会误判<br>rm ./-aaa-</p><h3 id="移动-mv"><a href="#移动-mv" class="headerlink" title="移动 mv"></a>移动 <strong>mv</strong></h3><p>mv [-fiu] source destination<br>mv [options] source1 source2 source3 … directory<br>[-f] 强制,如果存在的文件,不会询问直接覆盖<br>[-i] 询问<br>[-u] 若目标文件存在,且source比较新,才会更新(update)</p><p>更改名字<br>mv mytest mytest1<br>取得最后的档名<br>basename<br>取得目录名<br>dirname</p><h2 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h2><p>cat 由第一行开始显示文件内容<br>tac 从最后一行开始显示, tac就是cat倒着写的！<br>nl 显示行号<br>more 一页一页显示文件内容<br>less 比moreg好,可以向前翻页<br>head 只看前几行 -n (默认10行)<br>tail 只看后几行 -n (默认10行)<br>od 二进制的方式读取文件内容</p><p>cat [-AbEnTv]<br>[-A] 相当于-vET的整合<br>[-b] 列出行号,仅对非空白行,空白行不标行号<br>[-E] 结尾断行字符$显示出来<br>[-n] 打印出行号,空白行也打印<br>[-T] 将[tab]按键以 ^[显示出来<br>[-v] 列出一些看不到的特殊字符</p><p>more<br>空格 代表向下翻一页<br>Enter 代表向下翻一行<br>/字符串 [字符串]搜索<br>:f 立即显示出文件名和行数<br>q 退出<br>b 或者[Ctrl] + b 往回翻页</p><p>less<br>/字符串 向下搜索<br>?字符串 向上搜索<br>q 退出<br>g 第一行<br>G 最后一行</p><p>修改文件时间或者建置新档 touch<br>三个主要的变动时间</p><p>modification time<br>当该文件的[内容数据]变更时,就会更新这个时间<br>status time<br>当该文件的[状态]变更时,就会更新这个时间(权限或者属性)<br>access time<br>当[该文件的内容被取用]时,就会更新这个时间(cat 去读取时)</p><p>ls显示出来的是该文件的mtime,也就是这个文件上一次的内容被改动的时间。<br>如果touch的文件不存在,那么会创建一个新的空文件.如果存在那么文件的三个时间(atime,ctime,mtime)都会更新为目前的时间<br>ll===&gt; ls -l(别名)<br>[;] 代表连续指令的下达! date ; ll bashrc ; ll –time=atime bashrc; ll –time=ctime bashrc;<br>touch [-acdmt] 文件<br>[-a] 仅修改atime<br>[-c] 仅修改文件时间,文件不存在不新建<br>[-d] 后面可以接修改的日期而不是目前的日期,也可以使用 –date=”日期或者时间”<br>[-m] 仅修改mtime<br>[-t] 后面可以接修改的时间而不用目前的时间,格式为[YYYYMMDDhhmm]<br>复制一个文件时,复制所有的属性,但没办法复制ctime.</p>]]></content>
     
     <summary type="html">
     
@@ -433,30 +456,6 @@
       <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown操作</title>
-    <link href="http://yoursite.com/2019/10/19/Markdown%E6%93%8D%E4%BD%9C/"/>
-    <id>http://yoursite.com/2019/10/19/Markdown操作/</id>
-    <published>2019-10-19T11:12:11.000Z</published>
-    <updated>2019-10-19T13:08:05.125Z</updated>
-    
-    <content type="html"><![CDATA[<p>Markdownd是一种轻量级的标记语言<br>Markdownd编写的文档后缀为.md,.markdown</p><h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><a id="more"></a><ul><li><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a><strong>标题</strong></h1><h1 id="我是一级标题"><a href="#我是一级标题" class="headerlink" title="我是一级标题"></a>我是一级标题</h1>我是二级标题</li></ul><hr><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><figure class="highlight plain hljs"><figcaption><span>[格式]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">============</span><br><span class="line">------------</span><br><span class="line">#</span><br><span class="line">##</span><br><span class="line">###</span><br><span class="line">1-6个# 表示1-6级标题</span><br></pre></td></tr></table></figure><ul><li><h1 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a><strong>段落格式</strong></h1></li></ul><p>1.末尾添加两个空格<br>2.使用空行来换行</p><ul><li><h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a><strong>字体</strong></h1><figure class="highlight plain hljs"><figcaption><span>[字体格式]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体字体*</span><br><span class="line">_斜体字体_</span><br><span class="line">**粗体字体**</span><br><span class="line">__粗体字体__</span><br><span class="line">***粗斜体字体***</span><br><span class="line">___粗斜体字体___</span><br></pre></td></tr></table></figure></li></ul><p><em>斜体字体</em><br><em>斜体字体</em><br><strong>粗体字体</strong><br><strong>粗体字体</strong><br><strong><em>粗斜体字体</em></strong><br><strong><em>粗斜体字体</em></strong></p><ul><li><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a><strong>分割线</strong></h1><figure class="highlight plain hljs"><figcaption><span>[分割线格式]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------</span><br></pre></td></tr></table></figure></li></ul><hr><hr><ul><li><h1 id="删除线和下划线和脚注"><a href="#删除线和下划线和脚注" class="headerlink" title="删除线和下划线和脚注"></a><strong>删除线和下划线和脚注</strong></h1><del>zlwblog</del><br><u>zlwBLOG</u></li></ul><p>zlwblog1</p><p>这是一个脚注<a href="周李伟!!!">^123</a>这是一个脚注</p><ul><li><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a><strong>列表</strong></h1></li></ul><ul><li>1</li><li>2</li><li>3</li></ul><ol><li>1</li><li>2</li><li>3</li><li>第一项<ul><li>1.1</li><li>1.2</li></ul></li><li>第二项<ul><li>2.1</li><li>2.2<br>结束</li></ul></li></ol><ul><li><h1 id="区块"><a href="#区块" class="headerlink" title="区块"></a><strong>区块</strong></h1><blockquote><p>zzzzzz<br>llllll<br>wwwwwww<br>z</p></blockquote></li></ul><blockquote><p>1</p><blockquote><p>2</p><blockquote><p>3</p></blockquote></blockquote></blockquote><ul><li>1<blockquote><p>1.1<br>1.2</p></blockquote></li><li>2</li></ul><ul><li><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong>代码</strong></h1><p><code>printf()</code>函数</p><figure class="highlight plain hljs"><figcaption><span>test()&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 111;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><h1 id="支持HTML元素"><a href="#支持HTML元素" class="headerlink" title="支持HTML元素"></a><strong>支持HTML元素</strong></h1><p><a href="https://github/ZlwPick" target="_blank" rel="noopener">https://github/ZlwPick</a><br><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>重启电脑</p></li></ul><p>转义 *</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Markdownd是一种轻量级的标记语言&lt;br&gt;Markdownd编写的文档后缀为.md,.markdown&lt;/p&gt;&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World!&quot;&gt;&lt;/a&gt;Hello World!&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="写作" scheme="http://yoursite.com/tags/%E5%86%99%E4%BD%9C/"/>
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
