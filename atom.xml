@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-03T14:31:45.001Z</updated>
+  <updated>2019-11-04T08:30:56.904Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IDEA Debug调试</title>
+    <link href="http://yoursite.com/2019/11/04/IDEA-Debug%E8%B0%83%E8%AF%95/"/>
+    <id>http://yoursite.com/2019/11/04/IDEA-Debug调试/</id>
+    <published>2019-11-04T07:48:21.000Z</published>
+    <updated>2019-11-04T08:30:56.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>Debug调试的一些技巧</p><a id="more"></a><p><img src="/images/IDEA/IDEADebug.png" alt><br>从左向右<br>1.光标在其他的行或者页面,点击可以跳转到当前代码执行的行<br>(Alt + F10)<br>2.步过,一行一行往下走,这打断点的行上面有方法不会进入方法<br>(F8)<br>3.步入,如果当前行有方法,可以进入这个方法内部,一般是自定义方法,不会是函数库里面的方法<br>(F7)<br>4.强制步入,能进入任何方法<br>(Alt+Shift+F7)<br>5.步出,从步入的方法内退出到方法调用出,此时方法已执行完毕,只是没有完成赋值<br>(Shift+F8)<br>6.回退断点<br>7.运行到光标处,而不需要打断点<br>(Alt+ F9)<br>8.计算表达式 可以直接选择某个表达式再Alt + F8 直接在窗口输出的结果,也可以自己设置参数<br>(Alt + F8)</p><p><img src="/images/IDEA/IDEADebug2.png" alt><br>1.重新运行程序,关闭服务后重新启动程序<br>2.恢复程序(F9)<br>3.暂停程序<br>4.连续按两下,关闭程序(Ctrl+F2)<br>5.查看所有断点<br>6.哑的断点,选择这个后,所有的断点变成灰色,断点失效,按F9直接运行完程序。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Debug调试的一些技巧&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 学习日志-4</title>
     <link href="http://yoursite.com/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/"/>
     <id>http://yoursite.com/2019/11/03/Linux-学习日志-4/</id>
     <published>2019-11-03T14:30:54.000Z</published>
-    <updated>2019-11-03T14:31:45.001Z</updated>
+    <updated>2019-11-12T15:57:11.113Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022<br>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><a id="more"></a><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode 搜寻文件权限刚好等于 mode的文件<br>-perm -mode 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-      
+      &lt;h3 id=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;a href=&quot;#Linux文件与目录的默认权限与隐藏权限&quot; class=&quot;headerlink&quot; title=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux文件与目录的默认权限与隐藏权限&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;目前用户在建立文件或目录时候的权限默认值&lt;br&gt;umask&lt;br&gt;数字的方式显示&lt;br&gt;0022 第一组是特殊权限&lt;br&gt;umask -S&lt;br&gt;字符的方式显示&lt;br&gt;该默认值是需要减掉的权限&lt;br&gt;0022&lt;br&gt;建立的文件默认权限是644(6-0,6-2,6-2)&lt;br&gt;建立的目录的默认 权限是755(7-0,7-2,7-2)&lt;br&gt;设置umask 002 就可以改变当前的默认值&lt;br&gt;rwxr-xr-x&lt;/p&gt;
     
     </summary>
     
@@ -170,7 +187,7 @@
     <link href="http://yoursite.com/2019/10/26/IDEA-%E5%90%8E%E7%BC%80%E8%A1%A5%E5%85%A8/"/>
     <id>http://yoursite.com/2019/10/26/IDEA-后缀补全/</id>
     <published>2019-10-26T06:26:33.000Z</published>
-    <updated>2019-10-26T06:38:59.830Z</updated>
+    <updated>2019-11-04T07:40:51.770Z</updated>
     
     <content type="html"><![CDATA[<p>IDEA 有个很厉害的功能，那就是后缀补全（不是自动补全），<br>这个功能可以使用代码补全来模板式地补全语句，如遍历循环语句（for、foreach）、使用 String.format() 包裹一个字符串、使用类型转化包裹一个表达式、根据判（非）空或者其它判别语句生成 if 语句、用 instanceOf 生成分支判断语句等。</p><p>使用的方式也很简单，就是在一个表达式后按下点号 . ，然后输入一些提示或者在列表中选择一个候选项，常见的候选项下面会给出 GIF 演示。</p><a id="more"></a><ol><li><h3 id="var-声明"><a href="#var-声明" class="headerlink" title="var 声明"></a><strong>var 声明</strong></h3><p><img src="/images/IDEA/var.gif" alt></p></li><li><h3 id="null判断"><a href="#null判断" class="headerlink" title="null判断"></a><strong>null判断</strong></h3><p><img src="/images/IDEA/null.gif" alt></p></li><li><h3 id="notnull判断"><a href="#notnull判断" class="headerlink" title="notnull判断"></a><strong>notnull判断</strong></h3><p><img src="/images/IDEA/notnull.gif" alt></p></li><li><h3 id="nn判断"><a href="#nn判断" class="headerlink" title="nn判断"></a><strong>nn判断</strong></h3><p><img src="/images/IDEA/nn.gif" alt></p></li><li><h3 id="if"><a href="#if" class="headerlink" title="if"></a><strong>if</strong></h3><p><img src="/images/IDEA/if.gif" alt></p></li><li><h3 id="return"><a href="#return" class="headerlink" title="return"></a><strong>return</strong></h3><p><img src="/images/IDEA/return.gif" alt></p></li></ol>]]></content>
     
@@ -179,8 +196,6 @@
       &lt;p&gt;IDEA 有个很厉害的功能，那就是后缀补全（不是自动补全），&lt;br&gt;这个功能可以使用代码补全来模板式地补全语句，如遍历循环语句（for、foreach）、使用 String.format() 包裹一个字符串、使用类型转化包裹一个表达式、根据判（非）空或者其它判别语句生成 if 语句、用 instanceOf 生成分支判断语句等。&lt;/p&gt;&lt;p&gt;使用的方式也很简单，就是在一个表达式后按下点号 . ，然后输入一些提示或者在列表中选择一个候选项，常见的候选项下面会给出 GIF 演示。&lt;/p&gt;
     
     </summary>
-    
-      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
     
     
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
@@ -418,7 +433,7 @@
     <link href="http://yoursite.com/2019/10/20/IDEA-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://yoursite.com/2019/10/20/IDEA-常用的快捷键/</id>
     <published>2019-10-20T11:45:43.000Z</published>
-    <updated>2019-10-29T12:00:39.473Z</updated>
+    <updated>2019-11-04T07:40:40.812Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一键格式化代碼：-Ctrl-Alt-L"><a href="#一键格式化代碼：-Ctrl-Alt-L" class="headerlink" title="一键格式化代碼： Ctrl+Alt+L"></a>一键格式化代碼： Ctrl+Alt+L</h1><h1 id="全局搜索替换：ctrl-shift-r"><a href="#全局搜索替换：ctrl-shift-r" class="headerlink" title="全局搜索替换：ctrl+shift+r"></a>全局搜索替换：ctrl+shift+r</h1><h1 id="强大的搜索功能，shift-shift-无论您想要搜啥都能找到"><a href="#强大的搜索功能，shift-shift-无论您想要搜啥都能找到" class="headerlink" title="强大的搜索功能，shift+shift (无论您想要搜啥都能找到)"></a>强大的搜索功能，shift+shift (无论您想要搜啥都能找到)</h1><h3 id="ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类"><a href="#ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类" class="headerlink" title="ctrl+shift+R:搜索类   &emsp;&emsp;   CTRL+N：按照类名搜索类"></a>ctrl+shift+R:搜索类 &emsp;&emsp; CTRL+N：按照类名搜索类</h3><a id="more"></a><ul><li><h1 id="常规"><a href="#常规" class="headerlink" title="[常规]"></a>[常规]</h1><blockquote><p>Ctrl+Shift + Enter，语句完成<br>“！”，否定完成，输入表达式时按 “！”键<br>Ctrl+E，最近的文件<br>Ctrl+Shift+E，最近更改的文件<br>Shift+Click，可以关闭文件<br>Ctrl+[ OR ]，可以跑到大括号的开头与结尾<br>Ctrl+F12，可以显示当前文件的结构<br>Ctrl+F7，可以查询当前元素在当前文件中的引用，然后按 F3 可以选择<br>Ctrl+N，可以快速打开类<br>Ctrl+Shift+N，可以快速打开文件<br>Alt+Q，可以看到当前方法的声明<br>Ctrl+P，可以显示参数信息<br>Ctrl+Shift+Insert，可以选择剪贴板内容并插入<br>Alt+Insert，可以生成构造器/Getter/Setter等<br>Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义<br>Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch<br>Ctrl+Enter，导入包，自动修正<br>Ctrl+Alt+L，格式化代码<br>Ctrl+Alt+I，将选中的代码进行自动缩进编排，这个功能在编辑 JSP 文件时也可以工作<br>Ctrl+Alt+O，优化导入的类和包<br>Ctrl+R，替换文本<br>Ctrl+F，查找文本<br>Ctrl+Shift+Space，自动补全代码<br>Ctrl+空格，代码提示（与系统输入法快捷键冲突）<br>Ctrl+Shift+Alt+N，查找类中的方法或变量<br>Alt+Shift+C，最近的更改<br>Alt+Shift+Up/Down，上/下移一行<br>Shift+F6，重构 - 重命名<br>Ctrl+X，删除行<br>Ctrl+D，复制行<br>Ctrl+/或Ctrl+Shift+/，注释（//或者/**/）<br>Ctrl+J，自动代码（例如：serr）<br>Ctrl+Alt+J，用动态模板环绕<br>Ctrl+H，显示类结构图（类的继承层次）<br>Ctrl+Q，显示注释文档<br>Alt+F1，查找代码所在位置<br>Alt+1，快速打开或隐藏工程面板<br>Ctrl+Alt+left/right，返回至上次浏览的位置<br>Alt+left/right，切换代码视图<br>Alt+Up/Down，在方法间快速移动定位<br>Ctrl+Shift+Up/Down，向上/下移动语句<br>F2 或 Shift+F2，高亮错误或警告快速定位<br>Tab，代码标签输入完成后，按 Tab，生成代码<br>Ctrl+Shift+F7，高亮显示所有该文本，按 Esc 高亮消失<br>Alt+F3，逐个往下查找相同文本，并高亮显示<br>Ctrl+Up/Down，光标中转到第一行或最后一行下<br>Ctrl+B/Ctrl+Click，快速打开光标处的类或方法（跳转到定义处）<br>Ctrl+Alt+B，跳转到方法实现处<br>Ctrl+Shift+Backspace，跳转到上次编辑的地方<br>Ctrl+O，重写方法<br>Ctrl+Alt+Space，类名自动完成<br>Ctrl+Alt+Up/Down，快速跳转搜索结果<br>Ctrl+Shift+J，整合两行<br>Alt+F8，计算变量值<br>Ctrl+Shift+V，可以将最近使用的剪贴板内容选择插入到文本<br>Ctrl+Alt+Shift+V，简单粘贴<br>Shift+Esc，不仅可以把焦点移到编辑器上，而且还可以隐藏当前（或最后活动的）工具窗口<br>F12，把焦点从编辑器移到最近使用的工具窗口<br>Shift+F1，要打开编辑器光标字符处使用的类或者方法 Java 文档的浏览器<br>Ctrl+W，可以选择单词继而语句继而行继而函数<br>Ctrl+Shift+W，取消选择光标所在词<br>Alt+F7，查找整个工程中使用地某一个类、方法或者变量的位置<br>Ctrl+I，实现方法<br>Ctrl+Shift+U，大小写转化<br>Ctrl+Y，删除当前行<br>Shift+Enter，向下插入新行<br>psvm/sout，main/System.out.println(); Ctrl+J，查看更多<br>Ctrl+Shift+F，全局查找<br>Ctrl+F，查找/Shift+F3，向上查找/F3，向下查找<br>Ctrl+Shift+S，高级搜索<br>Ctrl+U，转到父类<br>Ctrl+Alt+S，打开设置对话框<br>Alt+Shift+Inert，开启/关闭列选择模式<br>Ctrl+Alt+Shift+S，打开当前项目/模块属性<br>Ctrl+G，定位行<br>Alt+Home，跳转到导航栏<br>Ctrl+Enter，上插一行<br>Ctrl+Backspace，按单词删除<br>Ctrl+”+/-“，当前方法展开、折叠<br>Ctrl+Shift+”+/-“，全部展开、折叠</p></blockquote></li><li><h1 id="调试部分、编译"><a href="#调试部分、编译" class="headerlink" title="[调试部分、编译]"></a>[调试部分、编译]</h1><blockquote><p>Ctrl+F2，停止<br>Alt+Shift+F9，选择 Debug<br>Alt+Shift+F10，选择 Run<br>Ctrl+Shift+F9，编译<br>Ctrl+Shift+F10，运行<br>Ctrl+Shift+F8，查看断点<br>F8，步过<br>F7，步入<br>Shift+F7，智能步入<br>Shift+F8，步出<br>Alt+Shift+F8，强制步过<br>Alt+Shift+F7，强制步入<br>Alt+F9，运行至光标处<br>Ctrl+Alt+F9，强制运行至光标处<br>F9，恢复程序<br>Alt+F10，定位到断点<br>Ctrl+F8，切换行断点<br>Ctrl+F9，生成项目<br>Alt+1，项目<br>Alt+2，收藏<br>Alt+6，TODO<br>Alt+7，结构<br>Ctrl+Shift+C，复制路径<br>Ctrl+Alt+Shift+C，复制引用，必须选择类名<br>Ctrl+Alt+Y，同步<br>Ctrl+~，快速切换方案（界面外观、代码风格、快捷键映射等菜单）<br>Shift+F12，还原默认布局<br>Ctrl+Shift+F12，隐藏/恢复所有窗口<br>Ctrl+F4，关闭<br>Ctrl+Shift+F4，关闭活动选项卡<br>Ctrl+Tab，转到下一个拆分器<br>Ctrl+Shift+Tab，转到上一个拆分器</p></blockquote></li><li><h1 id="重构"><a href="#重构" class="headerlink" title="[重构]"></a>[重构]</h1><blockquote><p>Ctrl+Alt+Shift+T，弹出重构菜单<br>Shift+F6，重命名<br>F6，移动<br>F5，复制<br>Alt+Delete，安全删除<br>Ctrl+Alt+N，内联</p></blockquote></li><li><h1 id="查找"><a href="#查找" class="headerlink" title="[查找]"></a>[查找]</h1><blockquote><p>Ctrl+F，查找<br>Ctrl+R，替换<br>F3，查找下一个<br>Shift+F3，查找上一个<br>Ctrl+Shift+F，在路径中查找<br>Ctrl+Shift+R，在路径中替换<br>Ctrl+Shift+S，搜索结构<br>Ctrl+Shift+M，替换结构<br>Alt+F7，查找用法<br>Ctrl+Alt+F7，显示用法<br>Ctrl+F7，在文件中查找用法<br>Ctrl+Shift+F7，在文件中高亮显示用法</p></blockquote></li><li><h1 id="VCS"><a href="#VCS" class="headerlink" title="[VCS]"></a>[VCS]</h1><blockquote><p>Alt+~，VCS 操作菜单<br>Ctrl+K，提交更改<br>Ctrl+T，更新项目<br>Ctrl+Alt+Shift+D，显示变化</p></blockquote></li></ul><p>-# [平时自己用的]</p><blockquote><p>复制提示信息 alt+左键</p></blockquote>]]></content>
     
@@ -428,34 +443,8 @@
     
     </summary>
     
-      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
-    
     
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 1.Two Sum</title>
-    <link href="http://yoursite.com/2019/10/20/LeetCode-1-Two-Sum/"/>
-    <id>http://yoursite.com/2019/10/20/LeetCode-1-Two-Sum/</id>
-    <published>2019-10-20T04:18:11.000Z</published>
-    <updated>2019-10-21T14:02:39.811Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Two-Sum"><a href="#Two-Sum" class="headerlink" title="Two Sum"></a><strong>Two Sum</strong></h1><p><strong>题目描述:</strong><br>给定一个整数数组和一个目标值,找出数组中和为目标值的 <strong>两个</strong> 数<br>你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。</p><p><strong>示例</strong><br>给定 nums = [2,7,11,15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回[0,1]</p><a id="more"></a><ul><li><h4 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h4><figure class="highlight java hljs"><figcaption><span>[暴力破解法]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] Solution(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) &#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (target == nums[i] + nums[j])</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;i, j&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"not two sum solution"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><h5 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h5><figure class="highlight java hljs"><figcaption><span>[一遍哈希表]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] Solution2(<span class="hljs-keyword">int</span>[] nums,<span class="hljs-keyword">int</span> target)&#123;</span><br><span class="line">       Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">       <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt; nums.length; i++) &#123;</span><br><span class="line">           <span class="hljs-keyword">if</span>(map.containsKey(target - nums[i])) &#123;</span><br><span class="line">               <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123;map.get(target-nums[i]),i&#125;;</span><br><span class="line">           &#125;</span><br><span class="line">           map.put(nums[i], i);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"No two sum solution"</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Two-Sum&quot;&gt;&lt;a href=&quot;#Two-Sum&quot; class=&quot;headerlink&quot; title=&quot;Two Sum&quot;&gt;&lt;/a&gt;&lt;strong&gt;Two Sum&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目描述:&lt;/strong&gt;&lt;br&gt;给定一个整数数组和一个目标值,找出数组中和为目标值的 &lt;strong&gt;两个&lt;/strong&gt; 数&lt;br&gt;你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;br&gt;给定 nums = [2,7,11,15], target = 9&lt;br&gt;因为 nums[0] + nums[1] = 2 + 7 = 9&lt;br&gt;所以返回[0,1]&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
