@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-04T08:30:56.904Z</updated>
+  <updated>2019-12-04T15:20:36.815Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据结构 线性表</title>
+    <link href="http://yoursite.com/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+    <id>http://yoursite.com/2019/12/04/数据结构-线性表/</id>
+    <published>2019-12-04T14:23:25.000Z</published>
+    <updated>2019-12-04T15:20:36.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>线性表的知识是之后的基础,一定要完全掌握.</p><a id="more"></a><h2 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h2><p>线性表是具有相同特性数据元素的一个<strong><font color="red">有序</font></strong>序列,长度为n.</p><h3 id="线性表的存储结构"><a href="#线性表的存储结构" class="headerlink" title="线性表的存储结构"></a>线性表的存储结构</h3><p>(1)顺序存储结构(顺序表)<br><font color="red">随机访问特性<br>占用连续的存储空间<br>顺序表插入操作的时候要移动多个元素</font><br>(2)链式存储结构(链表)<br><font color="red">不支持随机访问<br>结点的存储空间利用率较顺序表稍低一些<br>动态分配<br>进行插入操作无须移动元素</font></p><h3 id="链表有以下5种"><a href="#链表有以下5种" class="headerlink" title="链表有以下5种:"></a>链表有以下5种:</h3><p>(1)单链表<br>①.带头结点的<br>头指针head指向头结点,头结点的值域<font color="red">不含任何信息</font>,从头结点的后继结点<br>开始存储数据信息,头结点始终不等于NULL,head-&gt;next==NULL的时候,链表为空.<br>②.不带头结点的<br>头指针head直接指向开始结点,head==NULL时,链表为空.<br>(2)双链表<br>(3)循环单链表<br>(4)循环双链表<br>(5)静态链表</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;线性表的知识是之后的基础,一定要完全掌握.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构 基本概念</title>
+    <link href="http://yoursite.com/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>http://yoursite.com/2019/12/04/数据结构-基本概念/</id>
+    <published>2019-12-04T11:28:39.000Z</published>
+    <updated>2019-12-04T14:20:15.714Z</updated>
+    
+    <content type="html"><![CDATA[<p>这些概念不是很好记忆,需要把这些术语记住然后在带入生活中去理解。</p><a id="more"></a><h3 id="1-数据"><a href="#1-数据" class="headerlink" title="1.数据"></a><strong>1.数据</strong></h3><p>能<font color="red">输入</font>到计算机且能被计算机程序<font color="red">处理</font>的符号总称.(整数,字符串等)</p><h3 id="2-数据元素"><a href="#2-数据元素" class="headerlink" title="2.数据元素"></a><strong>2.数据元素</strong></h3><p>是数据的基本单位,一个数据元素可能由若干个数据项组成.</p><h3 id="3-数据项"><a href="#3-数据项" class="headerlink" title="3.数据项"></a><strong>3.数据项</strong></h3><p>是数据结构中<font color="red">最小的单位</font>,是数据记录中最基本的、不可分割的数据单位.</p><h3 id="4-数据对象"><a href="#4-数据对象" class="headerlink" title="4.数据对象"></a><strong>4.数据对象</strong></h3><p>相同的数据元素的集合,是数据的一个子集.</p><h3 id="5-数据结构"><a href="#5-数据结构" class="headerlink" title="5.数据结构"></a><strong>5.数据结构</strong></h3><p>相互之间存在一种或者多种<font color="red">特定关系</font>的数据元素的集合,包括一下三方面:<br>逻辑结构、存储结构、对数据的运算.</p><h3 id="6-数据的逻辑结构"><a href="#6-数据的逻辑结构" class="headerlink" title="6.数据的逻辑结构"></a><strong>6.数据的逻辑结构</strong></h3><p>是数据之间关系的描述,与数据的存储结构无关.</p><h4 id="①-线性结构"><a href="#①-线性结构" class="headerlink" title="①.线性结构"></a><strong>①.线性结构</strong></h4><p>是一个数据元素的有序集合,元素之间存在着”<font color="red">一对一</font>“的线性关系的数据结构，除了头尾元素,其他元素有且只有一个”前驱”和一个”后继”.</p><h4 id="②-非线性结构"><a href="#②-非线性结构" class="headerlink" title="②.非线性结构"></a><strong>②.非线性结构</strong></h4><p>与线性结构不同的是,元素之间存在”一对多”的关系.</p><h3 id="7-数据的物理结构"><a href="#7-数据的物理结构" class="headerlink" title="7.数据的物理结构"></a><strong>7.数据的物理结构</strong></h3><p>是数据的逻辑结构在计算机中的表示(映像–&gt;顺序映像和非顺序映像),包括<font color="red">数据</font>的表示和<font color="red">关系</font>的表示.</p><h4 id="①-顺序存储方法"><a href="#①-顺序存储方法" class="headerlink" title="①.顺序存储方法"></a><strong>①.顺序存储方法</strong></h4><p>把逻辑上相邻的结点存储在物理位置上相邻的存储单元上.(数组)</p><h4 id="②-链式存储方法"><a href="#②-链式存储方法" class="headerlink" title="②.链式存储方法"></a><strong>②.链式存储方法</strong></h4><p>不要求逻辑上相邻的结点在物理位置上也相邻,结点的逻辑关系是由附加的指针字段来表示的.(链表)</p><h4 id="③-索引存储方法"><a href="#③-索引存储方法" class="headerlink" title="③.索引存储方法"></a><strong>③.索引存储方法</strong></h4><p>在存储结点信息时除建立存储结点信息外,还建立附加的索引表来标识结点的地址.索引项的一般形式是&lt;关键字,地址&gt;</p><h4 id="④-散列存储方法"><a href="#④-散列存储方法" class="headerlink" title="④.散列存储方法"></a><strong>④.散列存储方法</strong></h4><p>根据结点的关键字通过散列函数直接计算出该结点的存储地址.</p><h1 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a><strong>算法的基本概念</strong></h1><p>1.算法的特性<br>(1)有穷性<br>(2)确定性<br>(3)输入<br>(4)输出<br>(5)可行性</p><p>2.算法的设计目标<br>(1)正确性<br>(1)可读性<br>(1)健壮性<br>(1)高效率与低存储量需求</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这些概念不是很好记忆,需要把这些术语记住然后在带入生活中去理解。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构总体的思维导图</title>
+    <link href="http://yoursite.com/2019/11/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E4%BD%93%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+    <id>http://yoursite.com/2019/11/30/数据结构总体的思维导图/</id>
+    <published>2019-11-30T13:17:53.000Z</published>
+    <updated>2019-11-30T13:29:31.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>自己整理的关于考研408数据结构需要掌握的数据结构的知识结构图。</p><p>这个月因为软考和看408的网络课程没有更新多少博客,在接下来的时间我会更新数据结构的C的代码练习,让自己掌握的更牢固.</p><a id="more"></a><p><img src="/images/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自己整理的关于考研408数据结构需要掌握的数据结构的知识结构图。&lt;/p&gt;&lt;p&gt;这个月因为软考和看408的网络课程没有更新多少博客,在接下来的时间我会更新数据结构的C的代码练习,让自己掌握的更牢固.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 学习日志-5</title>
+    <link href="http://yoursite.com/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/"/>
+    <id>http://yoursite.com/2019/11/13/Linux-学习日志-5/</id>
+    <published>2019-11-13T04:21:54.000Z</published>
+    <updated>2019-11-25T07:44:25.830Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Linux-磁盘与文件系统管理"><a href="#Linux-磁盘与文件系统管理" class="headerlink" title="Linux 磁盘与文件系统管理"></a><strong>Linux 磁盘与文件系统管理</strong></h3><p>磁盘的组成<br>圆形的磁盘盘(主要记录数据的部分)<br>机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)<br>主轴马达,可以转动磁盘盘</p><a id="more"></a><p>磁盘盘的组成</p><ul><li>扇区(Sector)为最小的物理储存单位,目前主要有 512bytes 与4K 两张格式.</li><li>将扇区组成一个圆,那就是磁柱;</li><li>早期的分区主要是以磁柱为最小分区单位,现在的分区通常使用扇区为最小分区单位(每一个扇区都有号码)</li><li>磁盘的分区表主要有两种格式,一个是限制较多的<font color="red">MBR分区表</font>,一种是较新且限制较少的<font color="red">GPT分区表</font></li><li>MBR分区表中,第一个扇区最重要,里面有:<br>(1)主要开机区(Master boot record)及分区表(partition table) MBR 占有446bytes 而 partition table 占有 64bytes</li><li>GPT分区表除了分区数量扩展开了</li></ul><p>所有的磁盘文件名已经被模拟成<br>/dev/sd[a-p][1-128]<br>/dev/vd[a-d][1-128]</p><p>文件系统特性</p><p>superblock: 记录filesystem 的整体信息,包括inode/block的总量、使用量、剩余量,及文件系统的格式和相关信息等</p><p><img src="http://q1ika11wl.bkt.clouddn.com/43753889_p0.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Linux-磁盘与文件系统管理&quot;&gt;&lt;a href=&quot;#Linux-磁盘与文件系统管理&quot; class=&quot;headerlink&quot; title=&quot;Linux 磁盘与文件系统管理&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux 磁盘与文件系统管理&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;磁盘的组成&lt;br&gt;圆形的磁盘盘(主要记录数据的部分)&lt;br&gt;机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)&lt;br&gt;主轴马达,可以转动磁盘盘&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA Debug调试</title>
@@ -41,13 +127,13 @@
     <link href="http://yoursite.com/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/"/>
     <id>http://yoursite.com/2019/11/03/Linux-学习日志-4/</id>
     <published>2019-11-03T14:30:54.000Z</published>
-    <updated>2019-11-12T15:57:11.113Z</updated>
+    <updated>2019-11-13T04:17:37.301Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022<br>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><a id="more"></a><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode 搜寻文件权限刚好等于 mode的文件<br>-perm -mode 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022</p><a id="more"></a><p>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><!--more--><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE　 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode　 搜寻文件权限刚好等于 mode的文件<br>-perm -mode　 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode　 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p><p>一. 让某用户进入某目录成为[可工作目录]的基本权限<br>用户至少有对这个目录需要具有 x 权限</p><p>二.让某用户在某个目录内读取一个文件的基本权限<br>用户至少对这个目录具有x权限<br>对文件具有r权限</p><p>三.让一个用户可以修改文件的权限<br>用户至少对这个目录具有x权限<br>对文件具有r w 权限</p>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;a href=&quot;#Linux文件与目录的默认权限与隐藏权限&quot; class=&quot;headerlink&quot; title=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux文件与目录的默认权限与隐藏权限&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;目前用户在建立文件或目录时候的权限默认值&lt;br&gt;umask&lt;br&gt;数字的方式显示&lt;br&gt;0022 第一组是特殊权限&lt;br&gt;umask -S&lt;br&gt;字符的方式显示&lt;br&gt;该默认值是需要减掉的权限&lt;br&gt;0022&lt;br&gt;建立的文件默认权限是644(6-0,6-2,6-2)&lt;br&gt;建立的目录的默认 权限是755(7-0,7-2,7-2)&lt;br&gt;设置umask 002 就可以改变当前的默认值&lt;br&gt;rwxr-xr-x&lt;/p&gt;
+      &lt;h3 id=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;a href=&quot;#Linux文件与目录的默认权限与隐藏权限&quot; class=&quot;headerlink&quot; title=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux文件与目录的默认权限与隐藏权限&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;目前用户在建立文件或目录时候的权限默认值&lt;br&gt;umask&lt;br&gt;数字的方式显示&lt;br&gt;0022 第一组是特殊权限&lt;br&gt;umask -S&lt;br&gt;字符的方式显示&lt;br&gt;该默认值是需要减掉的权限&lt;br&gt;0022&lt;/p&gt;
     
     </summary>
     
@@ -245,26 +331,6 @@
   </entry>
   
   <entry>
-    <title>算法的知识体系</title>
-    <link href="http://yoursite.com/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
-    <id>http://yoursite.com/2019/10/24/算法的知识体系/</id>
-    <published>2019-10-24T06:01:26.000Z</published>
-    <updated>2019-10-24T06:16:30.633Z</updated>
-    
-    <content type="html"><![CDATA[<p>算法：<br>1、排序算法：快速排序、归并排序、计数排序<br>2、搜索算法：回溯、递归、剪枝<br>3、图论：最短路径、最小生成树、网络流建模<br>4、动态规划：背包问题、最长子序列、计数问题<br>5、基础技巧：分治、倍增、二分法、贪心算法</p><a id="more"></a><p>数据结构：<br>1、数组和链表<br>2、栈与队列<br>3、树和图<br>4、哈希表<br>5、大/小跟堆，可并堆<br>6、字符串：字典树、后缀树</p><p><img src="/images/alg-overview.png" alt></p><h1 id="两个刷算法题的网站"><a href="#两个刷算法题的网站" class="headerlink" title="两个刷算法题的网站"></a>两个刷算法题的网站</h1><ul><li><a href="https://leetcode-cn.com/problemset/all/" target="_blank" rel="noopener">https://leetcode-cn.com/problemset/all/</a></li><li><a href="https://www.lintcode.com/problem/" target="_blank" rel="noopener">https://www.lintcode.com/problem/</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;算法：&lt;br&gt;1、排序算法：快速排序、归并排序、计数排序&lt;br&gt;2、搜索算法：回溯、递归、剪枝&lt;br&gt;3、图论：最短路径、最小生成树、网络流建模&lt;br&gt;4、动态规划：背包问题、最长子序列、计数问题&lt;br&gt;5、基础技巧：分治、倍增、二分法、贪心算法&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hexo+coding+github加速博客访问</title>
     <link href="http://yoursite.com/2019/10/24/Hexo-coding-github%E5%8A%A0%E9%80%9F%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE/"/>
     <id>http://yoursite.com/2019/10/24/Hexo-coding-github加速博客访问/</id>
@@ -377,74 +443,6 @@
       <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 13.Roman to Integer</title>
-    <link href="http://yoursite.com/2019/10/21/LeetCode-13-Roman-to-Integer/"/>
-    <id>http://yoursite.com/2019/10/21/LeetCode-13-Roman-to-Integer/</id>
-    <published>2019-10-21T13:03:15.000Z</published>
-    <updated>2019-10-22T05:36:37.719Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Roman-to-Integer"><a href="#Roman-to-Integer" class="headerlink" title="Roman to Integer"></a><strong>Roman to Integer</strong></h1><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p><blockquote><p>字符　　　数值<br>I 　　　　　1<br>V 　　　　　5<br>X 　　　　　10<br>L 　　　　　50<br>C 　　　　　100<br>D 　　　　　500<br>M 　　　　　1000</p></blockquote><a id="more"></a><p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做 XXVII, 即为 XX + V + II 。</p><p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p><p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。<br>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。<br>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。<br>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p><p><strong>示例 1:</strong></p><blockquote><p><strong>输入:</strong> “III”<br><strong>输出:</strong> 3</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p><strong>输入:</strong> “IV”<br><strong>输出:</strong> 4</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p><strong>输入:</strong> “IX”<br><strong>输出:</strong> 9</p></blockquote><p><strong>示例 4:</strong></p><blockquote><p><strong>输入:</strong> “LVIII”<br><strong>输出:</strong> 58<br><strong>解释:</strong> L = 50, V= 5, III = 3.</p></blockquote><p><strong>示例 5:</strong></p><blockquote><p><strong>输入:</strong> “MCMXCIV”<br><strong>输出:</strong> 1994<br><strong>解释:</strong> M = 1000, CM = 900, XC = 90, IV = 4.</p></blockquote><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">romanToInt</span><span class="hljs-params">(String s)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character,Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="hljs-string">'I'</span>,<span class="hljs-number">1</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'V'</span>,<span class="hljs-number">5</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'X'</span>,<span class="hljs-number">10</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'L'</span>,<span class="hljs-number">50</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'C'</span>,<span class="hljs-number">100</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'D'</span>,<span class="hljs-number">500</span>);</span><br><span class="line">        map.put(<span class="hljs-string">'M'</span>,<span class="hljs-number">1000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; map.get(s.charAt(i)) &gt; map.get(s.charAt(i-<span class="hljs-number">1</span>)))&#123;</span><br><span class="line">                result += map.get(s.charAt(i)) - <span class="hljs-number">2</span> * map.get(s.charAt(i-<span class="hljs-number">1</span>));</span><br><span class="line">            &#125;<span class="hljs-keyword">else</span>&#123;</span><br><span class="line">                result += map.get(s.charAt(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span>  result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Roman-to-Integer&quot;&gt;&lt;a href=&quot;#Roman-to-Integer&quot; class=&quot;headerlink&quot; title=&quot;Roman to Integer&quot;&gt;&lt;/a&gt;&lt;strong&gt;Roman to Integer&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;字符　　　数值&lt;br&gt;I 　　　　　1&lt;br&gt;V 　　　　　5&lt;br&gt;X 　　　　　10&lt;br&gt;L 　　　　　50&lt;br&gt;C 　　　　　100&lt;br&gt;D 　　　　　500&lt;br&gt;M 　　　　　1000&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 7.Reverse Integer</title>
-    <link href="http://yoursite.com/2019/10/21/LeetCode-7-Reverse-Integer/"/>
-    <id>http://yoursite.com/2019/10/21/LeetCode-7-Reverse-Integer/</id>
-    <published>2019-10-21T02:09:23.000Z</published>
-    <updated>2019-10-22T05:21:30.664Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Reverse-Integer"><a href="#Reverse-Integer" class="headerlink" title="Reverse Integer"></a><strong>Reverse Integer</strong></h1><p><strong>题目描述:</strong><br>给定一个32位有符号整数，将整数中的数字进行反转</p><p><strong>示例1:</strong><br><strong>输入:</strong>123<br><strong>输入:</strong>321</p><a id="more"></a><p><strong>示例2:</strong><br><strong>输入:</strong>-123<br><strong>输入:</strong>-321</p><p><strong>示例3:</strong><br><strong>输入:</strong>120<br><strong>输入:</strong>21</p><p><strong>注意:</strong><br>假设我们的环境只能存储32位有符号整数，其数值范围是[-2^31 , 2^31 -1],如果反转后的整数溢出，返回0.</p><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Solution</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> rev = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span> (x!=<span class="hljs-number">0</span>)&#123;</span><br><span class="line">        <span class="hljs-keyword">int</span> pop = x % <span class="hljs-number">10</span>;  <span class="hljs-comment">// 取x的最后一位</span></span><br><span class="line">        x /= <span class="hljs-number">10</span>;           <span class="hljs-comment">// 删除X的最后一位</span></span><br><span class="line">        <span class="hljs-keyword">if</span>(rev &gt; Integer.MAX_VALUE / <span class="hljs-number">10</span> || rev &lt; Integer.MIN_VALUE /<span class="hljs-number">10</span>)  <span class="hljs-comment">//溢出判断</span></span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">        rev = rev * <span class="hljs-number">10</span> + pop; <span class="hljs-comment">//之前的数值向前推进1位加上当前数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> rev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a href="https://zlwblog.cn" target="_blank" rel="noopener">https://zlwblog.cn</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Reverse-Integer&quot;&gt;&lt;a href=&quot;#Reverse-Integer&quot; class=&quot;headerlink&quot; title=&quot;Reverse Integer&quot;&gt;&lt;/a&gt;&lt;strong&gt;Reverse Integer&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目描述:&lt;/strong&gt;&lt;br&gt;给定一个32位有符号整数，将整数中的数字进行反转&lt;/p&gt;&lt;p&gt;&lt;strong&gt;示例1:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;输入:&lt;/strong&gt;123&lt;br&gt;&lt;strong&gt;输入:&lt;/strong&gt;321&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA 常用的快捷键</title>
-    <link href="http://yoursite.com/2019/10/20/IDEA-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://yoursite.com/2019/10/20/IDEA-常用的快捷键/</id>
-    <published>2019-10-20T11:45:43.000Z</published>
-    <updated>2019-11-04T07:40:40.812Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一键格式化代碼：-Ctrl-Alt-L"><a href="#一键格式化代碼：-Ctrl-Alt-L" class="headerlink" title="一键格式化代碼： Ctrl+Alt+L"></a>一键格式化代碼： Ctrl+Alt+L</h1><h1 id="全局搜索替换：ctrl-shift-r"><a href="#全局搜索替换：ctrl-shift-r" class="headerlink" title="全局搜索替换：ctrl+shift+r"></a>全局搜索替换：ctrl+shift+r</h1><h1 id="强大的搜索功能，shift-shift-无论您想要搜啥都能找到"><a href="#强大的搜索功能，shift-shift-无论您想要搜啥都能找到" class="headerlink" title="强大的搜索功能，shift+shift (无论您想要搜啥都能找到)"></a>强大的搜索功能，shift+shift (无论您想要搜啥都能找到)</h1><h3 id="ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类"><a href="#ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类" class="headerlink" title="ctrl+shift+R:搜索类   &emsp;&emsp;   CTRL+N：按照类名搜索类"></a>ctrl+shift+R:搜索类 &emsp;&emsp; CTRL+N：按照类名搜索类</h3><a id="more"></a><ul><li><h1 id="常规"><a href="#常规" class="headerlink" title="[常规]"></a>[常规]</h1><blockquote><p>Ctrl+Shift + Enter，语句完成<br>“！”，否定完成，输入表达式时按 “！”键<br>Ctrl+E，最近的文件<br>Ctrl+Shift+E，最近更改的文件<br>Shift+Click，可以关闭文件<br>Ctrl+[ OR ]，可以跑到大括号的开头与结尾<br>Ctrl+F12，可以显示当前文件的结构<br>Ctrl+F7，可以查询当前元素在当前文件中的引用，然后按 F3 可以选择<br>Ctrl+N，可以快速打开类<br>Ctrl+Shift+N，可以快速打开文件<br>Alt+Q，可以看到当前方法的声明<br>Ctrl+P，可以显示参数信息<br>Ctrl+Shift+Insert，可以选择剪贴板内容并插入<br>Alt+Insert，可以生成构造器/Getter/Setter等<br>Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义<br>Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch<br>Ctrl+Enter，导入包，自动修正<br>Ctrl+Alt+L，格式化代码<br>Ctrl+Alt+I，将选中的代码进行自动缩进编排，这个功能在编辑 JSP 文件时也可以工作<br>Ctrl+Alt+O，优化导入的类和包<br>Ctrl+R，替换文本<br>Ctrl+F，查找文本<br>Ctrl+Shift+Space，自动补全代码<br>Ctrl+空格，代码提示（与系统输入法快捷键冲突）<br>Ctrl+Shift+Alt+N，查找类中的方法或变量<br>Alt+Shift+C，最近的更改<br>Alt+Shift+Up/Down，上/下移一行<br>Shift+F6，重构 - 重命名<br>Ctrl+X，删除行<br>Ctrl+D，复制行<br>Ctrl+/或Ctrl+Shift+/，注释（//或者/**/）<br>Ctrl+J，自动代码（例如：serr）<br>Ctrl+Alt+J，用动态模板环绕<br>Ctrl+H，显示类结构图（类的继承层次）<br>Ctrl+Q，显示注释文档<br>Alt+F1，查找代码所在位置<br>Alt+1，快速打开或隐藏工程面板<br>Ctrl+Alt+left/right，返回至上次浏览的位置<br>Alt+left/right，切换代码视图<br>Alt+Up/Down，在方法间快速移动定位<br>Ctrl+Shift+Up/Down，向上/下移动语句<br>F2 或 Shift+F2，高亮错误或警告快速定位<br>Tab，代码标签输入完成后，按 Tab，生成代码<br>Ctrl+Shift+F7，高亮显示所有该文本，按 Esc 高亮消失<br>Alt+F3，逐个往下查找相同文本，并高亮显示<br>Ctrl+Up/Down，光标中转到第一行或最后一行下<br>Ctrl+B/Ctrl+Click，快速打开光标处的类或方法（跳转到定义处）<br>Ctrl+Alt+B，跳转到方法实现处<br>Ctrl+Shift+Backspace，跳转到上次编辑的地方<br>Ctrl+O，重写方法<br>Ctrl+Alt+Space，类名自动完成<br>Ctrl+Alt+Up/Down，快速跳转搜索结果<br>Ctrl+Shift+J，整合两行<br>Alt+F8，计算变量值<br>Ctrl+Shift+V，可以将最近使用的剪贴板内容选择插入到文本<br>Ctrl+Alt+Shift+V，简单粘贴<br>Shift+Esc，不仅可以把焦点移到编辑器上，而且还可以隐藏当前（或最后活动的）工具窗口<br>F12，把焦点从编辑器移到最近使用的工具窗口<br>Shift+F1，要打开编辑器光标字符处使用的类或者方法 Java 文档的浏览器<br>Ctrl+W，可以选择单词继而语句继而行继而函数<br>Ctrl+Shift+W，取消选择光标所在词<br>Alt+F7，查找整个工程中使用地某一个类、方法或者变量的位置<br>Ctrl+I，实现方法<br>Ctrl+Shift+U，大小写转化<br>Ctrl+Y，删除当前行<br>Shift+Enter，向下插入新行<br>psvm/sout，main/System.out.println(); Ctrl+J，查看更多<br>Ctrl+Shift+F，全局查找<br>Ctrl+F，查找/Shift+F3，向上查找/F3，向下查找<br>Ctrl+Shift+S，高级搜索<br>Ctrl+U，转到父类<br>Ctrl+Alt+S，打开设置对话框<br>Alt+Shift+Inert，开启/关闭列选择模式<br>Ctrl+Alt+Shift+S，打开当前项目/模块属性<br>Ctrl+G，定位行<br>Alt+Home，跳转到导航栏<br>Ctrl+Enter，上插一行<br>Ctrl+Backspace，按单词删除<br>Ctrl+”+/-“，当前方法展开、折叠<br>Ctrl+Shift+”+/-“，全部展开、折叠</p></blockquote></li><li><h1 id="调试部分、编译"><a href="#调试部分、编译" class="headerlink" title="[调试部分、编译]"></a>[调试部分、编译]</h1><blockquote><p>Ctrl+F2，停止<br>Alt+Shift+F9，选择 Debug<br>Alt+Shift+F10，选择 Run<br>Ctrl+Shift+F9，编译<br>Ctrl+Shift+F10，运行<br>Ctrl+Shift+F8，查看断点<br>F8，步过<br>F7，步入<br>Shift+F7，智能步入<br>Shift+F8，步出<br>Alt+Shift+F8，强制步过<br>Alt+Shift+F7，强制步入<br>Alt+F9，运行至光标处<br>Ctrl+Alt+F9，强制运行至光标处<br>F9，恢复程序<br>Alt+F10，定位到断点<br>Ctrl+F8，切换行断点<br>Ctrl+F9，生成项目<br>Alt+1，项目<br>Alt+2，收藏<br>Alt+6，TODO<br>Alt+7，结构<br>Ctrl+Shift+C，复制路径<br>Ctrl+Alt+Shift+C，复制引用，必须选择类名<br>Ctrl+Alt+Y，同步<br>Ctrl+~，快速切换方案（界面外观、代码风格、快捷键映射等菜单）<br>Shift+F12，还原默认布局<br>Ctrl+Shift+F12，隐藏/恢复所有窗口<br>Ctrl+F4，关闭<br>Ctrl+Shift+F4，关闭活动选项卡<br>Ctrl+Tab，转到下一个拆分器<br>Ctrl+Shift+Tab，转到上一个拆分器</p></blockquote></li><li><h1 id="重构"><a href="#重构" class="headerlink" title="[重构]"></a>[重构]</h1><blockquote><p>Ctrl+Alt+Shift+T，弹出重构菜单<br>Shift+F6，重命名<br>F6，移动<br>F5，复制<br>Alt+Delete，安全删除<br>Ctrl+Alt+N，内联</p></blockquote></li><li><h1 id="查找"><a href="#查找" class="headerlink" title="[查找]"></a>[查找]</h1><blockquote><p>Ctrl+F，查找<br>Ctrl+R，替换<br>F3，查找下一个<br>Shift+F3，查找上一个<br>Ctrl+Shift+F，在路径中查找<br>Ctrl+Shift+R，在路径中替换<br>Ctrl+Shift+S，搜索结构<br>Ctrl+Shift+M，替换结构<br>Alt+F7，查找用法<br>Ctrl+Alt+F7，显示用法<br>Ctrl+F7，在文件中查找用法<br>Ctrl+Shift+F7，在文件中高亮显示用法</p></blockquote></li><li><h1 id="VCS"><a href="#VCS" class="headerlink" title="[VCS]"></a>[VCS]</h1><blockquote><p>Alt+~，VCS 操作菜单<br>Ctrl+K，提交更改<br>Ctrl+T，更新项目<br>Ctrl+Alt+Shift+D，显示变化</p></blockquote></li></ul><p>-# [平时自己用的]</p><blockquote><p>复制提示信息 alt+左键</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一键格式化代碼：-Ctrl-Alt-L&quot;&gt;&lt;a href=&quot;#一键格式化代碼：-Ctrl-Alt-L&quot; class=&quot;headerlink&quot; title=&quot;一键格式化代碼： Ctrl+Alt+L&quot;&gt;&lt;/a&gt;一键格式化代碼： Ctrl+Alt+L&lt;/h1&gt;&lt;h1 id=&quot;全局搜索替换：ctrl-shift-r&quot;&gt;&lt;a href=&quot;#全局搜索替换：ctrl-shift-r&quot; class=&quot;headerlink&quot; title=&quot;全局搜索替换：ctrl+shift+r&quot;&gt;&lt;/a&gt;全局搜索替换：ctrl+shift+r&lt;/h1&gt;&lt;h1 id=&quot;强大的搜索功能，shift-shift-无论您想要搜啥都能找到&quot;&gt;&lt;a href=&quot;#强大的搜索功能，shift-shift-无论您想要搜啥都能找到&quot; class=&quot;headerlink&quot; title=&quot;强大的搜索功能，shift+shift (无论您想要搜啥都能找到)&quot;&gt;&lt;/a&gt;强大的搜索功能，shift+shift (无论您想要搜啥都能找到)&lt;/h1&gt;&lt;h3 id=&quot;ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类&quot;&gt;&lt;a href=&quot;#ctrl-shift-R-搜索类-emsp-emsp-CTRL-N：按照类名搜索类&quot; class=&quot;headerlink&quot; title=&quot;ctrl+shift+R:搜索类   &amp;emsp;&amp;emsp;   CTRL+N：按照类名搜索类&quot;&gt;&lt;/a&gt;ctrl+shift+R:搜索类 &amp;emsp;&amp;emsp; CTRL+N：按照类名搜索类&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
   </entry>
   

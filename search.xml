@@ -4,6 +4,100 @@
   
     
     <entry>
+      <title>数据结构 线性表</title>
+      <link href="/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+      <url>/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<p>线性表的知识是之后的基础,一定要完全掌握.</p><a id="more"></a><h2 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h2><p>线性表是具有相同特性数据元素的一个<strong><font color="red">有序</font></strong>序列,长度为n.</p><h3 id="线性表的存储结构"><a href="#线性表的存储结构" class="headerlink" title="线性表的存储结构"></a>线性表的存储结构</h3><p>(1)顺序存储结构(顺序表)<br><font color="red">随机访问特性<br>占用连续的存储空间<br>顺序表插入操作的时候要移动多个元素</font><br>(2)链式存储结构(链表)<br><font color="red">不支持随机访问<br>结点的存储空间利用率较顺序表稍低一些<br>动态分配<br>进行插入操作无须移动元素</font></p><h3 id="链表有以下5种"><a href="#链表有以下5种" class="headerlink" title="链表有以下5种:"></a>链表有以下5种:</h3><p>(1)单链表<br>①.带头结点的<br>头指针head指向头结点,头结点的值域<font color="red">不含任何信息</font>,从头结点的后继结点<br>开始存储数据信息,头结点始终不等于NULL,head-&gt;next==NULL的时候,链表为空.<br>②.不带头结点的<br>头指针head直接指向开始结点,head==NULL时,链表为空.<br>(2)双链表<br>(3)循环单链表<br>(4)循环双链表<br>(5)静态链表</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构 基本概念</title>
+      <link href="/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+      <url>/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+      
+        <content type="html"><![CDATA[<p>这些概念不是很好记忆,需要把这些术语记住然后在带入生活中去理解。</p><a id="more"></a><h3 id="1-数据"><a href="#1-数据" class="headerlink" title="1.数据"></a><strong>1.数据</strong></h3><p>能<font color="red">输入</font>到计算机且能被计算机程序<font color="red">处理</font>的符号总称.(整数,字符串等)</p><h3 id="2-数据元素"><a href="#2-数据元素" class="headerlink" title="2.数据元素"></a><strong>2.数据元素</strong></h3><p>是数据的基本单位,一个数据元素可能由若干个数据项组成.</p><h3 id="3-数据项"><a href="#3-数据项" class="headerlink" title="3.数据项"></a><strong>3.数据项</strong></h3><p>是数据结构中<font color="red">最小的单位</font>,是数据记录中最基本的、不可分割的数据单位.</p><h3 id="4-数据对象"><a href="#4-数据对象" class="headerlink" title="4.数据对象"></a><strong>4.数据对象</strong></h3><p>相同的数据元素的集合,是数据的一个子集.</p><h3 id="5-数据结构"><a href="#5-数据结构" class="headerlink" title="5.数据结构"></a><strong>5.数据结构</strong></h3><p>相互之间存在一种或者多种<font color="red">特定关系</font>的数据元素的集合,包括一下三方面:<br>逻辑结构、存储结构、对数据的运算.</p><h3 id="6-数据的逻辑结构"><a href="#6-数据的逻辑结构" class="headerlink" title="6.数据的逻辑结构"></a><strong>6.数据的逻辑结构</strong></h3><p>是数据之间关系的描述,与数据的存储结构无关.</p><h4 id="①-线性结构"><a href="#①-线性结构" class="headerlink" title="①.线性结构"></a><strong>①.线性结构</strong></h4><p>是一个数据元素的有序集合,元素之间存在着”<font color="red">一对一</font>“的线性关系的数据结构，除了头尾元素,其他元素有且只有一个”前驱”和一个”后继”.</p><h4 id="②-非线性结构"><a href="#②-非线性结构" class="headerlink" title="②.非线性结构"></a><strong>②.非线性结构</strong></h4><p>与线性结构不同的是,元素之间存在”一对多”的关系.</p><h3 id="7-数据的物理结构"><a href="#7-数据的物理结构" class="headerlink" title="7.数据的物理结构"></a><strong>7.数据的物理结构</strong></h3><p>是数据的逻辑结构在计算机中的表示(映像–&gt;顺序映像和非顺序映像),包括<font color="red">数据</font>的表示和<font color="red">关系</font>的表示.</p><h4 id="①-顺序存储方法"><a href="#①-顺序存储方法" class="headerlink" title="①.顺序存储方法"></a><strong>①.顺序存储方法</strong></h4><p>把逻辑上相邻的结点存储在物理位置上相邻的存储单元上.(数组)</p><h4 id="②-链式存储方法"><a href="#②-链式存储方法" class="headerlink" title="②.链式存储方法"></a><strong>②.链式存储方法</strong></h4><p>不要求逻辑上相邻的结点在物理位置上也相邻,结点的逻辑关系是由附加的指针字段来表示的.(链表)</p><h4 id="③-索引存储方法"><a href="#③-索引存储方法" class="headerlink" title="③.索引存储方法"></a><strong>③.索引存储方法</strong></h4><p>在存储结点信息时除建立存储结点信息外,还建立附加的索引表来标识结点的地址.索引项的一般形式是&lt;关键字,地址&gt;</p><h4 id="④-散列存储方法"><a href="#④-散列存储方法" class="headerlink" title="④.散列存储方法"></a><strong>④.散列存储方法</strong></h4><p>根据结点的关键字通过散列函数直接计算出该结点的存储地址.</p><h1 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a><strong>算法的基本概念</strong></h1><p>1.算法的特性<br>(1)有穷性<br>(2)确定性<br>(3)输入<br>(4)输出<br>(5)可行性</p><p>2.算法的设计目标<br>(1)正确性<br>(1)可读性<br>(1)健壮性<br>(1)高效率与低存储量需求</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构总体的思维导图</title>
+      <link href="/2019/11/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E4%BD%93%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+      <url>/2019/11/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E4%BD%93%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p>自己整理的关于考研408数据结构需要掌握的数据结构的知识结构图。</p><p>这个月因为软考和看408的网络课程没有更新多少博客,在接下来的时间我会更新数据结构的C的代码练习,让自己掌握的更牢固.</p><a id="more"></a><p><img src="/images/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux 学习日志-5</title>
+      <link href="/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/"/>
+      <url>/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Linux-磁盘与文件系统管理"><a href="#Linux-磁盘与文件系统管理" class="headerlink" title="Linux 磁盘与文件系统管理"></a><strong>Linux 磁盘与文件系统管理</strong></h3><p>磁盘的组成<br>圆形的磁盘盘(主要记录数据的部分)<br>机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)<br>主轴马达,可以转动磁盘盘</p><a id="more"></a><p>磁盘盘的组成</p><ul><li>扇区(Sector)为最小的物理储存单位,目前主要有 512bytes 与4K 两张格式.</li><li>将扇区组成一个圆,那就是磁柱;</li><li>早期的分区主要是以磁柱为最小分区单位,现在的分区通常使用扇区为最小分区单位(每一个扇区都有号码)</li><li>磁盘的分区表主要有两种格式,一个是限制较多的<font color="red">MBR分区表</font>,一种是较新且限制较少的<font color="red">GPT分区表</font></li><li>MBR分区表中,第一个扇区最重要,里面有:<br>(1)主要开机区(Master boot record)及分区表(partition table) MBR 占有446bytes 而 partition table 占有 64bytes</li><li>GPT分区表除了分区数量扩展开了</li></ul><p>所有的磁盘文件名已经被模拟成<br>/dev/sd[a-p][1-128]<br>/dev/vd[a-d][1-128]</p><p>文件系统特性</p><p>superblock: 记录filesystem 的整体信息,包括inode/block的总量、使用量、剩余量,及文件系统的格式和相关信息等</p><p><img src="http://q1ika11wl.bkt.clouddn.com/43753889_p0.jpg" alt></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA Debug调试</title>
       <link href="/2019/11/04/IDEA-Debug%E8%B0%83%E8%AF%95/"/>
       <url>/2019/11/04/IDEA-Debug%E8%B0%83%E8%AF%95/</url>
@@ -27,7 +121,7 @@
       <link href="/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/"/>
       <url>/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/</url>
       
-        <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022<br>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><a id="more"></a><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode 搜寻文件权限刚好等于 mode的文件<br>-perm -mode 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022</p><a id="more"></a><p>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><!--more--><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE　 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode　 搜寻文件权限刚好等于 mode的文件<br>-perm -mode　 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode　 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p><p>一. 让某用户进入某目录成为[可工作目录]的基本权限<br>用户至少有对这个目录需要具有 x 权限</p><p>二.让某用户在某个目录内读取一个文件的基本权限<br>用户至少对这个目录具有x权限<br>对文件具有r权限</p><p>三.让一个用户可以修改文件的权限<br>用户至少对这个目录具有x权限<br>对文件具有r w 权限</p>]]></content>
       
       
       
@@ -231,25 +325,6 @@
             <tag> 好文章 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>算法的知识体系</title>
-      <link href="/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
-      <url>/2019/10/24/%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</url>
-      
-        <content type="html"><![CDATA[<p>算法：<br>1、排序算法：快速排序、归并排序、计数排序<br>2、搜索算法：回溯、递归、剪枝<br>3、图论：最短路径、最小生成树、网络流建模<br>4、动态规划：背包问题、最长子序列、计数问题<br>5、基础技巧：分治、倍增、二分法、贪心算法</p><a id="more"></a><p>数据结构：<br>1、数组和链表<br>2、栈与队列<br>3、树和图<br>4、哈希表<br>5、大/小跟堆，可并堆<br>6、字符串：字典树、后缀树</p><p><img src="/images/alg-overview.png" alt></p><h1 id="两个刷算法题的网站"><a href="#两个刷算法题的网站" class="headerlink" title="两个刷算法题的网站"></a>两个刷算法题的网站</h1><ul><li><a href="https://leetcode-cn.com/problemset/all/" target="_blank" rel="noopener">https://leetcode-cn.com/problemset/all/</a></li><li><a href="https://www.lintcode.com/problem/" target="_blank" rel="noopener">https://www.lintcode.com/problem/</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
       
     </entry>
     
