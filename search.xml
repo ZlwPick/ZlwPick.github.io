@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Python-入门篇9</title>
+      <link href="/2019/12/27/Python-%E5%85%A5%E9%97%A8%E7%AF%879/"/>
+      <url>/2019/12/27/Python-%E5%85%A5%E9%97%A8%E7%AF%879/</url>
+      
+        <content type="html"><![CDATA[<p>这部分是关于多线程与多进程之间的知识,再次之前必须了解操作系统的相关知识,因为Python是在系统调用进行了封装.</p><a id="more"></a><p>在Linux中,创造新进程的方法只有一个，就是fork(),其他的函数库看似可以创建进程,其实内部调用了fork(),<br>普通的函数:调用一次,返回一次.<br>fork():调用的一个奇妙之处就是<font color="red">它仅仅被调用一次，却能够返回两次.</font><br>1.在父进程中，fork返回新创建子进程的进程ID；<br>2.在子进程中，fork返回0；<br>3.如果出现错误，fork返回一个负值；</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> os</span><br><span class="line"></span><br><span class="line">print(os.getpid())</span><br><span class="line"><span class="hljs-comment">#子进程只需要调用getppid()就可以拿到父进程的ID。</span></span><br><span class="line">pid = os.fork()</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python-入门篇8</title>
       <link href="/2019/12/23/Python-%E5%85%A5%E9%97%A8%E7%AF%878/"/>
       <url>/2019/12/23/Python-%E5%85%A5%E9%97%A8%E7%AF%878/</url>

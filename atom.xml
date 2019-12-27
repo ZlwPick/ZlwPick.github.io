@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-23T14:35:42.486Z</updated>
+  <updated>2019-12-27T09:06:44.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python-入门篇9</title>
+    <link href="http://yoursite.com/2019/12/27/Python-%E5%85%A5%E9%97%A8%E7%AF%879/"/>
+    <id>http://yoursite.com/2019/12/27/Python-入门篇9/</id>
+    <published>2019-12-27T08:44:38.000Z</published>
+    <updated>2019-12-27T09:06:44.179Z</updated>
+    
+    <content type="html"><![CDATA[<p>这部分是关于多线程与多进程之间的知识,再次之前必须了解操作系统的相关知识,因为Python是在系统调用进行了封装.</p><a id="more"></a><p>在Linux中,创造新进程的方法只有一个，就是fork(),其他的函数库看似可以创建进程,其实内部调用了fork(),<br>普通的函数:调用一次,返回一次.<br>fork():调用的一个奇妙之处就是<font color="red">它仅仅被调用一次，却能够返回两次.</font><br>1.在父进程中，fork返回新创建子进程的进程ID；<br>2.在子进程中，fork返回0；<br>3.如果出现错误，fork返回一个负值；</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> os</span><br><span class="line"></span><br><span class="line">print(os.getpid())</span><br><span class="line"><span class="hljs-comment">#子进程只需要调用getppid()就可以拿到父进程的ID。</span></span><br><span class="line">pid = os.fork()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这部分是关于多线程与多进程之间的知识,再次之前必须了解操作系统的相关知识,因为Python是在系统调用进行了封装.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python-入门篇8</title>
     <link href="http://yoursite.com/2019/12/23/Python-%E5%85%A5%E9%97%A8%E7%AF%878/"/>
     <id>http://yoursite.com/2019/12/23/Python-入门篇8/</id>
     <published>2019-12-23T09:21:33.000Z</published>
-    <updated>2019-12-23T14:35:42.486Z</updated>
+    <updated>2019-12-27T08:06:28.545Z</updated>
     
     <content type="html"><![CDATA[<p>这一部分是关于IO操作</p><a id="more"></a><h2 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h2><p>使用Python内部的函数open()</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">with</span> open(<span class="hljs-string">"C:/Users/1171676294/Desktop/新建文本文档 (2).txt"</span>,<span class="hljs-string">"r"</span>,encoding=<span class="hljs-string">'UTF-8'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">print(f.read()) <span class="hljs-comment">#会一次性读取文件的全部内容</span></span><br><span class="line">    <span class="hljs-comment">#with语句来自动帮我们调用close()方法</span></span><br><span class="line">    <span class="hljs-comment">#f.close()</span></span><br></pre></td></tr></table></figure><p>1.read(size)方法，每次最多读取size个字节的内容。<br>2.readlines()一次读取所有内容并按行返回list。<br>rb,已二进制的形式读取文件</p><h2 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h2><p>使用Python内部的函数open()</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">with</span> open(<span class="hljs-string">"C:/Users/1171676294/Desktop/text.txt"</span>,<span class="hljs-string">"w"</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">f.write(<span class="hljs-string">"zlwzlwlzlw"</span>)</span><br><span class="line">    <span class="hljs-comment">#w 写命令 wb 已二进制写入文件</span></span><br><span class="line">    <span class="hljs-comment">#'a'以追加（append）模式写入。</span></span><br></pre></td></tr></table></figure><h2 id="读写内存"><a href="#读写内存" class="headerlink" title="读写内存"></a>读写内存</h2><p>1.写入字符串<br>2.读写二进制文件</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> StringIO</span><br><span class="line">f = StringIO()</span><br><span class="line">print(f.write(<span class="hljs-string">"zlwzlwzlw"</span>))</span><br><span class="line">print(f.getvalue())</span><br><span class="line"><span class="hljs-comment"># print(f.write(" "))</span></span><br><span class="line">print(f.readable())</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span>  BytesIO</span><br></pre></td></tr></table></figure><h2 id="os模块"><a href="#os模块" class="headerlink" title="os模块"></a>os模块</h2><p>Python内置的os模块也可以直接调用操作系统提供的接口函数。</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> os</span><br><span class="line"><span class="hljs-comment">#查看当前的操作系统</span></span><br><span class="line">print(os.name)</span><br><span class="line"><span class="hljs-comment">#查看当前目录的绝对路径</span></span><br><span class="line">print(os.path.abspath(<span class="hljs-string">"."</span>))</span><br><span class="line"><span class="hljs-comment">#在路径拼接</span></span><br><span class="line">print(os.path.join(<span class="hljs-string">"C:/Users/1171676294/Desktop/"</span>,<span class="hljs-string">"408"</span>))</span><br><span class="line"><span class="hljs-comment">#创建目录</span></span><br><span class="line">print(os.mkdir(<span class="hljs-string">"C:/Users/1171676294/Desktop/zlwzlw"</span>))</span><br><span class="line"><span class="hljs-comment">#删除目录</span></span><br><span class="line">os.rmdir(<span class="hljs-string">"C:/Users/1171676294/Desktop/zlwzlw"</span>)</span><br><span class="line"><span class="hljs-comment">#得到文件名</span></span><br><span class="line">print(os.path.split(<span class="hljs-string">"C:/Users/1171676294/Desktop/zlwzlw"</span>)[<span class="hljs-number">1</span>])</span><br><span class="line"><span class="hljs-comment">#得到文件扩展名</span></span><br><span class="line">print(os.path.splitext(<span class="hljs-string">"C:/Users/1171676294/Desktop/zlwzlw"</span>)[<span class="hljs-number">1</span>])</span><br><span class="line"><span class="hljs-comment">#对于当前目录下文件改名</span></span><br><span class="line">print(os.rename(<span class="hljs-string">"ZZZ.txt"</span>,<span class="hljs-string">"zlwzlwzlw.txt"</span>))</span><br><span class="line"><span class="hljs-comment">#删除文件</span></span><br><span class="line">os.remove(<span class="hljs-string">"zlwzlwzlw.txt"</span>)</span><br></pre></td></tr></table></figure><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p><font color="red">变量从内存中变成可存储或传输的过程称之为序列化</font>，在Python中叫pickling，在其他语言中也被称之为serialization，</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line">f = dict(name=<span class="hljs-string">"zlw"</span>,age=<span class="hljs-number">18</span>,score=<span class="hljs-number">90</span>)</span><br><span class="line">print(pickle.dumps(f))</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -403,26 +423,6 @@
     
     
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 学习日志-4</title>
-    <link href="http://yoursite.com/2019/11/03/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-4/"/>
-    <id>http://yoursite.com/2019/11/03/Linux-学习日志-4/</id>
-    <published>2019-11-03T14:30:54.000Z</published>
-    <updated>2019-11-13T04:17:37.301Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Linux文件与目录的默认权限与隐藏权限"><a href="#Linux文件与目录的默认权限与隐藏权限" class="headerlink" title="Linux文件与目录的默认权限与隐藏权限"></a><strong>Linux文件与目录的默认权限与隐藏权限</strong></h3><p>目前用户在建立文件或目录时候的权限默认值<br>umask<br>数字的方式显示<br>0022 第一组是特殊权限<br>umask -S<br>字符的方式显示<br>该默认值是需要减掉的权限<br>0022</p><a id="more"></a><p>建立的文件默认权限是644(6-0,6-2,6-2)<br>建立的目录的默认 权限是755(7-0,7-2,7-2)<br>设置umask 002 就可以改变当前的默认值<br>rwxr-xr-x</p><!--more--><p>文件的隐藏属性<br>暂时不看</p><p>Set UID</p><p>查看文件类型<br>file 文件名</p><p>脚本文件名搜索<br>which [-a] command<br>a 就是all PATH中可以找到的所有指令列出来</p><p>文件的档名的搜寻<br>whereis [-bmsu] 文件或者文件名<br>[-l] 可以列出 whereis 会去查询的几个主要目录而已<br>[-b] 只找binary格式的文件<br>[-m] 只找说明文件 manual<br>[-s] 只找source来源的文件<br>[-u] 搜索不在上述三个项目当中的其他特殊文件</p><p>find指令 花费的时间很大(因为它是直接搜寻硬盘)<br>whereis指令 只找几个特定的目录而已,并没有全系统的去查询(主要是针对/bin/sbin底下的执行档)<br>locate指令 寻找的数据是在(已建立的数据库 /var/lib/mlocate/)</p><p>locate [-ir] keyword(文件的部分名称)<br>[-i] 忽略大小写<br>[-c] 不输出档名,仅计算找到的文件数目<br>[-l] 输出几行的意思 -l 5<br>[-S] 输出locate 使用的数据库文件的相关信息<br>[-r] 正规可接正规表示法显示方式<br>因为locate是经数据库来搜寻的,而数据库的建立默认是在每天执行一次,那么你新建的文件使用这个指令可能找不到,所以必须跟新数据库<br>使用updatedb来更新</p><p>find [PATH] [option] [option]<br>有 -atime, -ctime , -mtime<br>-mtime<br>n 　n为数字,意义在n天之前的[一天之内]被更动过内容的文件<br>+n 　n天<b>之前</b>被更动过内容的文件档名(不包括n天本身)<br>-n　 n天<b>之内</b>被更改内容的文件档名<br>-newer file 　 file为一个存在的文件,列出比file 还要新的文件档名<br>find / -mtime 0<br>find Desktop -newer /</p><p>与使用者或者组名有关的参数<br>-uid n　 n为数字,这个数字是用户的账号的UID<br>-gid n　 n为数字,这个数字是组名的GID<br>-user name 　name为使用者的名字<br>-group name　 name为组名<br>-nouser　 寻找文件拥有者不存在的与 /etc/passwd 的人<br>-nogroup 　寻找文件的拥有群组不存在 /etc/group 的文件</p><p>与文件的权限及名称有关的参数<br>-name filename　 搜索文件名为filename的文件<br>-size [+-]SIZE 　 搜寻比SIZE 还要大(+)或(-)的文件.<br>　 c: byte k:1024bytes 要找20KB还要大的文件<br>-size +50k<br>-type TYPE　 搜寻文件的类型为TYPE的,(一般正规文件f,装置文件b、c,d,l,s,p)<br>-perm mode　 搜寻文件权限刚好等于 mode的文件<br>-perm -mode　 搜寻文件权限[必须全部包括mode的权限]的文件<br>-perm /mode　 搜寻文件权限[包括任一mode的权限]的文件</p><p>额外可进行的动作<br>-exec command exec后面可以接其他的指令<br>-print 打印输出显示</p><p>find / size +1M -exec ls -l {} ;<br>-exec 后面的指令不支持命令别名<br>{} 代表的是[由find找到的内容],find的结果会被放置到{}位置中<br>;是关键词,表示find 额外的动作开始(-exec)到结束(;),在中间的就是find指令内的额外的动作<br>[;] 在bash环境下有特殊的意义,因此利用反斜杠来跳脱</p><p>一. 让某用户进入某目录成为[可工作目录]的基本权限<br>用户至少有对这个目录需要具有 x 权限</p><p>二.让某用户在某个目录内读取一个文件的基本权限<br>用户至少对这个目录具有x权限<br>对文件具有r权限</p><p>三.让一个用户可以修改文件的权限<br>用户至少对这个目录具有x权限<br>对文件具有r w 权限</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;a href=&quot;#Linux文件与目录的默认权限与隐藏权限&quot; class=&quot;headerlink&quot; title=&quot;Linux文件与目录的默认权限与隐藏权限&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux文件与目录的默认权限与隐藏权限&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;目前用户在建立文件或目录时候的权限默认值&lt;br&gt;umask&lt;br&gt;数字的方式显示&lt;br&gt;0022 第一组是特殊权限&lt;br&gt;umask -S&lt;br&gt;字符的方式显示&lt;br&gt;该默认值是需要减掉的权限&lt;br&gt;0022&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
