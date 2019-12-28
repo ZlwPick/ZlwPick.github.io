@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-27T09:06:44.179Z</updated>
+  <updated>2019-12-28T15:09:50.589Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019年自我总结</title>
+    <link href="http://yoursite.com/2019/12/28/2019%E5%B9%B4%E8%87%AA%E6%88%91%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/12/28/2019年自我总结/</id>
+    <published>2019-12-28T13:19:54.000Z</published>
+    <updated>2019-12-28T15:09:50.589Z</updated>
+    
+    <content type="html"><![CDATA[<p>&nbsp;</p><a id="more"></a><h1 id="自我总结"><a href="#自我总结" class="headerlink" title="自我总结"></a><p style="text-align:center"><font>自我总结<font></font></font></p></h1><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 2019年对于我来说是具有成长性的一年,这一年里面我收获许多,也绝望很多,但还是坚持下来了,而且对自己未来的道路十分的迷茫,我分别对这一年的时间内进行概述:<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;1月的时候我还在深圳找工作,在各个平台上投了加起来将近7000多份简历,只收到了仅有的7次面试.我现在都还记得那种绝望,整个房间都空了,朋友们都去面试了,只有自己一个人坐在凳子上,投简历、准备面试题、准备自我介绍。在7次的面试中有4家是培训机构的子公司(达内),面试你这种刚出来的小白,就是一顿打击,然后让你他们的公司培训一下.还有一次是一个居民楼里面的公司自己感觉还行,但回来之前就没有信息了,还有一次我坐地铁2个小时,然后又走了半个小时,然后是一个骗子公司,啥技术都没问,就给你开8000,还说我们这最低8000.我傻了都,还有一次运维的工作要去外地现在维护就没去开的5000,最后一次是我工作的公司深圳市筷云有限公司,跟软通动力一个写字楼,实习5000,转正8000,考察期1个星期,一个外包公司.我进去的第一个星期双休变单休,……,由于这个是一个外包公司,人员变动的很快,基本上公司一直在招人,我一进来就一工作了1个月的哥们被项目大佬嫌太菜给踢了,我慌的一比,但还好项目很快就熟悉了下了,也慢慢的好起来了,然后过年回来我一哥们说要专升本,我还是头一次一听说专升本,了解了一下,打算试一试,所以辞去了深圳的工作,回家复习.<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 3月我开始了复习,一开始准备的是湖北师范大学,买了c语言、微机原理的资料,英语基础基本上是从音开始的(我是真的菜),然后就开开始疯狂学微机可以多拉点分,写了接近100份微机试卷,MD,招生简章出来了,说今年不考微机了,……,然后我就换了一个学校,荆楚理工.花了1个月的时间去重新学了计算机基础,到了6月考试,出的题目是真的简单(英语看不懂除外),然后就考上了,15名,之前就跟基友疯玩了2个月(现在想想就后悔浪费了这么多的时间),9月去上学.<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 9月来到学校,看了课表,MD,居然有CAD,我服了,一个计算机学院的开了一门机械的课程,我不喜欢这个课,就开始学自己想学的东西,之前用hexo搭了一个静态的博客,就一直没有管了,我就重新启动了这个博客,给它注册了个域名,开始写博客了,我写的博客是自己学习过程中的一些总结,才发现写博客是多快乐的一件事情,看着自己的文章一篇一篇变多了,心里就有一种满足感,这种满足比我打游戏还舒服,之后的几个月我基本上没有打几次游戏了,中途报了个软考程序员,也过了,题很简单.又去图书馆看了一下408的那几门课程,打算如果明年4级过了就去试一试考研.<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 回看我这即将过去的2019,觉得有几分可惜、有几分自信、几分迷茫,但过去的都过去了,目前只有把握现在,才能去追求远方和我等了很久的那个女孩,在此我给我在2020定一下几个目标:<br>1.坚持写博客,减一下肥<br>2.liunx一定要学好<br>3.javaWeb相关的知识学习,中间件,并发等<br>4.看源码<br>5.坚持背单词<br>6.3月的篮桥,4月的四级<br>7.LeetCode的题坚持刷</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在最后引用美国往事里面的一句话:</p><blockquote><p>当我对世事厌倦的时候，我就会想到你。想到你在世界的某个地方生活着、存在着，我就愿意忍受一切。你的存在对我很重要。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Python-入门篇9</title>
@@ -403,26 +421,6 @@
     
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA Debug调试</title>
-    <link href="http://yoursite.com/2019/11/04/IDEA-Debug%E8%B0%83%E8%AF%95/"/>
-    <id>http://yoursite.com/2019/11/04/IDEA-Debug调试/</id>
-    <published>2019-11-04T07:48:21.000Z</published>
-    <updated>2019-11-04T08:30:56.904Z</updated>
-    
-    <content type="html"><![CDATA[<p>Debug调试的一些技巧</p><a id="more"></a><p><img src="/images/IDEA/IDEADebug.png" alt><br>从左向右<br>1.光标在其他的行或者页面,点击可以跳转到当前代码执行的行<br>(Alt + F10)<br>2.步过,一行一行往下走,这打断点的行上面有方法不会进入方法<br>(F8)<br>3.步入,如果当前行有方法,可以进入这个方法内部,一般是自定义方法,不会是函数库里面的方法<br>(F7)<br>4.强制步入,能进入任何方法<br>(Alt+Shift+F7)<br>5.步出,从步入的方法内退出到方法调用出,此时方法已执行完毕,只是没有完成赋值<br>(Shift+F8)<br>6.回退断点<br>7.运行到光标处,而不需要打断点<br>(Alt+ F9)<br>8.计算表达式 可以直接选择某个表达式再Alt + F8 直接在窗口输出的结果,也可以自己设置参数<br>(Alt + F8)</p><p><img src="/images/IDEA/IDEADebug2.png" alt><br>1.重新运行程序,关闭服务后重新启动程序<br>2.恢复程序(F9)<br>3.暂停程序<br>4.连续按两下,关闭程序(Ctrl+F2)<br>5.查看所有断点<br>6.哑的断点,选择这个后,所有的断点变成灰色,断点失效,按F9直接运行完程序。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Debug调试的一些技巧&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
   </entry>
   
