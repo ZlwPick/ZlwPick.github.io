@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-28T15:09:50.589Z</updated>
+  <updated>2020-01-01T15:32:34.584Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java-基础篇1</title>
+    <link href="http://yoursite.com/2020/01/01/Java-%E5%9F%BA%E7%A1%80%E7%AF%871/"/>
+    <id>http://yoursite.com/2020/01/01/Java-基础篇1/</id>
+    <published>2020-01-01T13:54:42.000Z</published>
+    <updated>2020-01-01T15:32:34.584Z</updated>
+    
+    <content type="html"><![CDATA[<p>距上次学习Java基础已经过去2年多了,现在或多或少忘记了一些知识点,正好这次期末要考Java基础,在此重新把Java基础过一遍,查漏补缺,加深印象.</p><a id="more"></a><h1 id="Java基础知识"><a href="#Java基础知识" class="headerlink" title="Java基础知识"></a>Java基础知识</h1><h2 id="Java的基础程序设计结构"><a href="#Java的基础程序设计结构" class="headerlink" title="Java的基础程序设计结构"></a>Java的基础程序设计结构</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>##对象和类</p><h2 id="11"><a href="#11" class="headerlink" title="11"></a>11</h2><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;距上次学习Java基础已经过去2年多了,现在或多或少忘记了一些知识点,正好这次期末要考Java基础,在此重新把Java基础过一遍,查漏补缺,加深印象.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>2019年自我总结</title>
@@ -401,26 +421,6 @@
     
     
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 学习日志-5</title>
-    <link href="http://yoursite.com/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/"/>
-    <id>http://yoursite.com/2019/11/13/Linux-学习日志-5/</id>
-    <published>2019-11-13T04:21:54.000Z</published>
-    <updated>2019-11-25T07:44:25.830Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Linux-磁盘与文件系统管理"><a href="#Linux-磁盘与文件系统管理" class="headerlink" title="Linux 磁盘与文件系统管理"></a><strong>Linux 磁盘与文件系统管理</strong></h3><p>磁盘的组成<br>圆形的磁盘盘(主要记录数据的部分)<br>机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)<br>主轴马达,可以转动磁盘盘</p><a id="more"></a><p>磁盘盘的组成</p><ul><li>扇区(Sector)为最小的物理储存单位,目前主要有 512bytes 与4K 两张格式.</li><li>将扇区组成一个圆,那就是磁柱;</li><li>早期的分区主要是以磁柱为最小分区单位,现在的分区通常使用扇区为最小分区单位(每一个扇区都有号码)</li><li>磁盘的分区表主要有两种格式,一个是限制较多的<font color="red">MBR分区表</font>,一种是较新且限制较少的<font color="red">GPT分区表</font></li><li>MBR分区表中,第一个扇区最重要,里面有:<br>(1)主要开机区(Master boot record)及分区表(partition table) MBR 占有446bytes 而 partition table 占有 64bytes</li><li>GPT分区表除了分区数量扩展开了</li></ul><p>所有的磁盘文件名已经被模拟成<br>/dev/sd[a-p][1-128]<br>/dev/vd[a-d][1-128]</p><p>文件系统特性</p><p>superblock: 记录filesystem 的整体信息,包括inode/block的总量、使用量、剩余量,及文件系统的格式和相关信息等</p><p><img src="http://q1ika11wl.bkt.clouddn.com/43753889_p0.jpg" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Linux-磁盘与文件系统管理&quot;&gt;&lt;a href=&quot;#Linux-磁盘与文件系统管理&quot; class=&quot;headerlink&quot; title=&quot;Linux 磁盘与文件系统管理&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux 磁盘与文件系统管理&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;磁盘的组成&lt;br&gt;圆形的磁盘盘(主要记录数据的部分)&lt;br&gt;机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)&lt;br&gt;主轴马达,可以转动磁盘盘&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
