@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Linux 学习日志-6</title>
+      <link href="/2020/01/14/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-6/"/>
+      <url>/2020/01/14/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-6/</url>
+      
+        <content type="html"><![CDATA[<p>vi 跟 vim 编辑器</p><a id="more"></a><h1 id="正常模式"><a href="#正常模式" class="headerlink" title="正常模式"></a>正常模式</h1><p>可以使用快捷键<br>yy复制当前行, 5yy复制当前以下5行 p粘贴<br>dd 删除<br>G 最末行<br>gg 最首行<br>u 撤销之前写的<br>10gg<br>查找某关键字 /XXXX n 下一个</p><h1 id="插入模式-编辑模式"><a href="#插入模式-编辑模式" class="headerlink" title="插入模式(编辑模式)"></a>插入模式(编辑模式)</h1><p>可以输入内容,按i、I,o、O等进入</p><h1 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h1><p>可以完成读取,存盘,替换,离开等操作<br>q 打开后没有修改<br>wq 打开后修改了<br>q! 强制保存<br>set nu 设置行数<br>set nonu 取消行数</p><h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><p>添加用户: useradd [选项] -d 指定目录 (每个用户必须在一个组里面,新创建的一个组在以自己名字的组中)<br>useradd -g 组名 用户名</p><p>passwd 设置密码</p><p>userdel 删除用户 保存家目录 [-r] 家目录一起删除</p><p>查询用户信息<br>id 用户名<br>su - 切换到root<br>su - 用户名 切换到普通用户<br>exit 回到原来的用户</p><p>添加组<br>groupadd 组名<br>groupdel 组名</p><p>修改用户所在的组<br>usermod -g 组名 用户名</p><p>用户信息配置文件<br>etc/passwd<br>其中行的每一个项的意义<br>用户名 口令 用户id 组id 家目录 登录shell</p><p>组配置文件<br>etc/group<br>其中行的每一个项的意义<br>组名 口令 组内成员列表 组id</p><p>口令配置文件(密码和登录信息,是加密的)<br>etc/shadow<br>其中行的每一个项的意义<br>登录名 加密口令 最后一次修改时间 最小间隔 最大时间间隔等等</p><ol start="4"><li>描述linux运行级别0-6的各自含义（记时1分钟）<br>0：关机<br>1：单用户模式<br>2：无网络支持的多用户模式<br>3：有网络支持的多用户模式（文本模式，工作中最常使用的模式）<br>4：保留，未使用<br>5：有网络支持有X-Window支持的多用户模式<br>6：重新引导系统，即重启</li></ol><p>文件在/etc/inittab中</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode 198 House Robber</title>
       <link href="/2020/01/06/LeetCode-198-House-Robber/"/>
       <url>/2020/01/06/LeetCode-198-House-Robber/</url>
@@ -534,7 +553,7 @@
       <link href="/2019/10/30/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-1/"/>
       <url>/2019/10/30/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-1/</url>
       
-        <content type="html"><![CDATA[<h3 id="主要学了一些基础的指令-热键"><a href="#主要学了一些基础的指令-热键" class="headerlink" title="主要学了一些基础的指令,热键"></a><strong>主要学了一些基础的指令,热键</strong></h3><p>command [-options] parameter1 parameter2<br>指令 选项 参数1 参数2</p><a id="more"></a><p>date</p><p>date +%Y/%m/%d</p><p>date +%H:%M</p><p>cal</p><p>cal [month] [year]</p><p>bc<br>--quit 退出</p><p>热键<br>[tab] 具有[命令补全] 与 [文件补齐] 的功能! ca[tab][tab]</p><p>date --[tab][tab]</p><p>[Ctrl] + c 中断目前程序</p><p>[Ctrl] + d 键盘输入结束 可以取代(exit)</p><p>[Ctrl] + l 清屏</p><p>[shift] + [PageUP]|[Page Down] 向前/向后翻页</p><p>--help|less |more 都是可以进行翻页阅读</p><p>nano text.txt</p><p>观察系统的使用状态<br>netstat -a</p><p>sync 将数据同步写入硬盘中 (如果在内存中的没有写入硬盘,该指令就可以把内存中的数据写入硬盘)<br>shutdown (root用户下) poweroff<br>reboot halt</p><p>su - (身份变成root,底下输入root的密码)<br>shutdown 如果什么参数都没有加 则系统会在1分钟之后关机<br>-k 不是真的关机,只是发出警告！<br>-r 系统的服务停掉之后重新启动<br>-h 服务停掉之后关机<br>-c 取消shutdown指令内容</p><p>systemctl [指令]<br>halt shutdown reboot poweroff</p><p>pwd — 打印出当前工作目录名</p><p>cd — 更改目录</p><p>ls — 列出目录内容</p><p>ls — 列出目录内容</p><p>file — 确定文件类型</p><p>less — 浏览文件内容</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="主要学了一些基础的指令-热键"><a href="#主要学了一些基础的指令-热键" class="headerlink" title="主要学了一些基础的指令,热键"></a><strong>主要学了一些基础的指令,热键</strong></h3><p>command [-options] parameter1 parameter2<br>指令 选项 参数1 参数2</p><a id="more"></a><p>date</p><p>date +%Y/%m/%d</p><p>date +%H:%M</p><p>cal</p><p>cal [month] [year]</p><p>bc<br>--quit 退出</p><p>热键<br>[tab] 具有[命令补全] 与 [文件补齐] 的功能! ca[tab][tab]</p><p>date --[tab][tab]</p><p>[Ctrl] + c 中断目前程序</p><p>[Ctrl] + d 键盘输入结束 可以取代(exit)</p><p>[Ctrl] + l 清屏</p><p>[shift] + [PageUP]|[Page Down] 向前/向后翻页</p><p>--help|less |more 都是可以进行翻页阅读</p><p>nano text.txt</p><p>观察系统的使用状态<br>netstat -a</p><p>su - (身份变成root,底下输入root的密码)</p><h1 id="关机-amp-重启指令"><a href="#关机-amp-重启指令" class="headerlink" title="关机&amp;重启指令"></a>关机&amp;重启指令</h1><p>shutdown 如果什么参数都没有加 则系统会在1分钟之后关机<br>-k 不是真的关机,只是发出警告！<br>-r 系统的服务停掉之后重新启动<br>-h 服务停掉之后关机<br>-c 取消shutdown指令内容</p><p><font color="red">sync 将数据同步写入硬盘中 (如果在内存中的没有写入硬盘,该指令就可以把内存中的数据写入硬盘)</font><br>shutdown (root用户下) poweroff<br>reboot(重启) halt</p><p>logout 用户注销</p><p>systemctl [指令]<br>halt shutdown reboot poweroff</p><p>pwd — 打印出当前工作目录名</p><p>cd — 更改目录</p><p>ls — 列出目录内容</p><p>ls — 列出目录内容</p><p>file — 确定文件类型</p><p>less — 浏览文件内容</p>]]></content>
       
       
       

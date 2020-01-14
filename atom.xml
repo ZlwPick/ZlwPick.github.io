@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-06T15:39:50.178Z</updated>
+  <updated>2020-01-14T13:40:39.065Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 学习日志-6</title>
+    <link href="http://yoursite.com/2020/01/14/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-6/"/>
+    <id>http://yoursite.com/2020/01/14/Linux-学习日志-6/</id>
+    <published>2020-01-14T10:55:18.000Z</published>
+    <updated>2020-01-14T13:40:39.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>vi 跟 vim 编辑器</p><a id="more"></a><h1 id="正常模式"><a href="#正常模式" class="headerlink" title="正常模式"></a>正常模式</h1><p>可以使用快捷键<br>yy复制当前行, 5yy复制当前以下5行 p粘贴<br>dd 删除<br>G 最末行<br>gg 最首行<br>u 撤销之前写的<br>10gg<br>查找某关键字 /XXXX n 下一个</p><h1 id="插入模式-编辑模式"><a href="#插入模式-编辑模式" class="headerlink" title="插入模式(编辑模式)"></a>插入模式(编辑模式)</h1><p>可以输入内容,按i、I,o、O等进入</p><h1 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h1><p>可以完成读取,存盘,替换,离开等操作<br>q 打开后没有修改<br>wq 打开后修改了<br>q! 强制保存<br>set nu 设置行数<br>set nonu 取消行数</p><h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><p>添加用户: useradd [选项] -d 指定目录 (每个用户必须在一个组里面,新创建的一个组在以自己名字的组中)<br>useradd -g 组名 用户名</p><p>passwd 设置密码</p><p>userdel 删除用户 保存家目录 [-r] 家目录一起删除</p><p>查询用户信息<br>id 用户名<br>su - 切换到root<br>su - 用户名 切换到普通用户<br>exit 回到原来的用户</p><p>添加组<br>groupadd 组名<br>groupdel 组名</p><p>修改用户所在的组<br>usermod -g 组名 用户名</p><p>用户信息配置文件<br>etc/passwd<br>其中行的每一个项的意义<br>用户名 口令 用户id 组id 家目录 登录shell</p><p>组配置文件<br>etc/group<br>其中行的每一个项的意义<br>组名 口令 组内成员列表 组id</p><p>口令配置文件(密码和登录信息,是加密的)<br>etc/shadow<br>其中行的每一个项的意义<br>登录名 加密口令 最后一次修改时间 最小间隔 最大时间间隔等等</p><ol start="4"><li>描述linux运行级别0-6的各自含义（记时1分钟）<br>0：关机<br>1：单用户模式<br>2：无网络支持的多用户模式<br>3：有网络支持的多用户模式（文本模式，工作中最常使用的模式）<br>4：保留，未使用<br>5：有网络支持有X-Window支持的多用户模式<br>6：重新引导系统，即重启</li></ol><p>文件在/etc/inittab中</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vi 跟 vim 编辑器&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 198 House Robber</title>
@@ -394,28 +414,6 @@
     <summary type="html">
     
       &lt;p&gt;线性表的知识是之后的基础,一定要完全掌握.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构 基本概念</title>
-    <link href="http://yoursite.com/2019/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>http://yoursite.com/2019/12/04/数据结构-基本概念/</id>
-    <published>2019-12-04T11:28:39.000Z</published>
-    <updated>2019-12-04T14:20:15.714Z</updated>
-    
-    <content type="html"><![CDATA[<p>这些概念不是很好记忆,需要把这些术语记住然后在带入生活中去理解。</p><a id="more"></a><h3 id="1-数据"><a href="#1-数据" class="headerlink" title="1.数据"></a><strong>1.数据</strong></h3><p>能<font color="red">输入</font>到计算机且能被计算机程序<font color="red">处理</font>的符号总称.(整数,字符串等)</p><h3 id="2-数据元素"><a href="#2-数据元素" class="headerlink" title="2.数据元素"></a><strong>2.数据元素</strong></h3><p>是数据的基本单位,一个数据元素可能由若干个数据项组成.</p><h3 id="3-数据项"><a href="#3-数据项" class="headerlink" title="3.数据项"></a><strong>3.数据项</strong></h3><p>是数据结构中<font color="red">最小的单位</font>,是数据记录中最基本的、不可分割的数据单位.</p><h3 id="4-数据对象"><a href="#4-数据对象" class="headerlink" title="4.数据对象"></a><strong>4.数据对象</strong></h3><p>相同的数据元素的集合,是数据的一个子集.</p><h3 id="5-数据结构"><a href="#5-数据结构" class="headerlink" title="5.数据结构"></a><strong>5.数据结构</strong></h3><p>相互之间存在一种或者多种<font color="red">特定关系</font>的数据元素的集合,包括一下三方面:<br>逻辑结构、存储结构、对数据的运算.</p><h3 id="6-数据的逻辑结构"><a href="#6-数据的逻辑结构" class="headerlink" title="6.数据的逻辑结构"></a><strong>6.数据的逻辑结构</strong></h3><p>是数据之间关系的描述,与数据的存储结构无关.</p><h4 id="①-线性结构"><a href="#①-线性结构" class="headerlink" title="①.线性结构"></a><strong>①.线性结构</strong></h4><p>是一个数据元素的有序集合,元素之间存在着”<font color="red">一对一</font>“的线性关系的数据结构，除了头尾元素,其他元素有且只有一个”前驱”和一个”后继”.</p><h4 id="②-非线性结构"><a href="#②-非线性结构" class="headerlink" title="②.非线性结构"></a><strong>②.非线性结构</strong></h4><p>与线性结构不同的是,元素之间存在”一对多”的关系.</p><h3 id="7-数据的物理结构"><a href="#7-数据的物理结构" class="headerlink" title="7.数据的物理结构"></a><strong>7.数据的物理结构</strong></h3><p>是数据的逻辑结构在计算机中的表示(映像–&gt;顺序映像和非顺序映像),包括<font color="red">数据</font>的表示和<font color="red">关系</font>的表示.</p><h4 id="①-顺序存储方法"><a href="#①-顺序存储方法" class="headerlink" title="①.顺序存储方法"></a><strong>①.顺序存储方法</strong></h4><p>把逻辑上相邻的结点存储在物理位置上相邻的存储单元上.(数组)</p><h4 id="②-链式存储方法"><a href="#②-链式存储方法" class="headerlink" title="②.链式存储方法"></a><strong>②.链式存储方法</strong></h4><p>不要求逻辑上相邻的结点在物理位置上也相邻,结点的逻辑关系是由附加的指针字段来表示的.(链表)</p><h4 id="③-索引存储方法"><a href="#③-索引存储方法" class="headerlink" title="③.索引存储方法"></a><strong>③.索引存储方法</strong></h4><p>在存储结点信息时除建立存储结点信息外,还建立附加的索引表来标识结点的地址.索引项的一般形式是&lt;关键字,地址&gt;</p><h4 id="④-散列存储方法"><a href="#④-散列存储方法" class="headerlink" title="④.散列存储方法"></a><strong>④.散列存储方法</strong></h4><p>根据结点的关键字通过散列函数直接计算出该结点的存储地址.</p><h1 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a><strong>算法的基本概念</strong></h1><p>1.算法的特性<br>(1)有穷性<br>(2)确定性<br>(3)输入<br>(4)输出<br>(5)可行性</p><p>2.算法的设计目标<br>(1)正确性<br>(1)可读性<br>(1)健壮性<br>(1)高效率与低存储量需求</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这些概念不是很好记忆,需要把这些术语记住然后在带入生活中去理解。&lt;/p&gt;
     
     </summary>
     
