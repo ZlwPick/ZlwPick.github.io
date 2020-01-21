@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-19T08:25:16.364Z</updated>
+  <updated>2020-01-21T15:20:29.835Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/01/19/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-7/"/>
     <id>http://yoursite.com/2020/01/19/Linux-学习日志-7/</id>
     <published>2020-01-19T08:24:11.000Z</published>
-    <updated>2020-01-19T08:25:16.364Z</updated>
+    <updated>2020-01-21T15:20:29.835Z</updated>
     
-    <content type="html"><![CDATA[<p>组管理和权限管理</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>组管理和权限管理</p><a id="more"></a><p>[chgrp] 改变文件所属群组<br>[chown] 改变文件拥有者</p><p>改变用户所在的组<br>usermod -g 组名 用户名</p><p>groups 查询所有的组</p><p>chown newuser:newgroup file 改变用户的拥有者和所在组<br>-r 目录下面的所有东西都改变</p><h1 id="crond-任务调度"><a href="#crond-任务调度" class="headerlink" title="crond 任务调度"></a>crond 任务调度</h1><p>crontab [选项]<br>| -e | 编辑crontab定时任务 |<br>| -i | 查询crontab任务 |<br>| -r | 删除当前用户所有的crontab任务 |</p><p>参数细节<br>| / | 含义 | 范围 |<br>| :—-:| :—-: | :—-: |<br>| 第一个”*” | 一小时当中的第几分钟 | 0-59 |<br>| 第二个”*” | 一天当中的第几小时 | 0-23 |<br>| 第三个”*” | 一月当中的第几天 | 0-31 |<br>| 第四个”*” | 一年当中的第几月 | 1-12 |<br>| 第五个”*” | 一周当中的星期几 | 0-7 |</p><p>特殊符号<br>| 特殊符号 | 含义 |<br>| :—-:| :—-: |<br>| * | 一小时当中的第几分钟 |<br>| 第二个”*” | 一天当中的第几小时 |<br>| 第三个”*” | 一月当中的第几天 |<br>| 第四个”*” | 一年当中的第几月 |<br>| 第五个”*” | 一周当中的星期几 |</p>]]></content>
     
     <summary type="html">
     
