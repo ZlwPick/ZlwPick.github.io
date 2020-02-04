@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>java-jvm篇1</title>
+      <link href="/2020/02/04/java-jvm%E7%AF%871/"/>
+      <url>/2020/02/04/java-jvm%E7%AF%871/</url>
+      
+        <content type="html"><![CDATA[<p>jvm帮你做内存管理</p><a id="more"></a><p><img src="/images/java/jvm/jdk,jre,jvm.png" alt></p><p>打比方，就是把一段代码进入jvm进行分解,个个部分进入不同的区块<br><img src="/images/java/jvm/JVM%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%BA.png" alt><br>程序计算器:指向当前线程正在执行的字节码指令的地址 行号(线程进行切换时继续保存一些的数据)<br>jvm栈:存储当前线程运行方法所需要的数据、指令、返回地址<br>本地方法栈：功能和特点类似于虚拟机栈，均具有线程隔离的特点以及都能抛出StackOverflowError和OutOfMemoryError异常。<br>方法区:类信息,常量(1.7后有变化),静态变量,jit<br><font color="red">heap:</font></p><p>jvm 内存模型 JMM</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux 学习日志-7</title>
       <link href="/2020/01/19/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-7/"/>
       <url>/2020/01/19/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-7/</url>
@@ -477,7 +496,7 @@
       <link href="/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/"/>
       <url>/2019/11/13/Linux-%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-5/</url>
       
-        <content type="html"><![CDATA[<h3 id="Linux-磁盘与文件系统管理"><a href="#Linux-磁盘与文件系统管理" class="headerlink" title="Linux 磁盘与文件系统管理"></a><strong>Linux 磁盘与文件系统管理</strong></h3><p>磁盘的组成<br>圆形的磁盘盘(主要记录数据的部分)<br>机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)<br>主轴马达,可以转动磁盘盘</p><a id="more"></a><p>磁盘盘的组成</p><ul><li>扇区(Sector)为最小的物理储存单位,目前主要有 512bytes 与4K 两张格式.</li><li>将扇区组成一个圆,那就是磁柱;</li><li>早期的分区主要是以磁柱为最小分区单位,现在的分区通常使用扇区为最小分区单位(每一个扇区都有号码)</li><li>磁盘的分区表主要有两种格式,一个是限制较多的<font color="red">MBR分区表</font>,一种是较新且限制较少的<font color="red">GPT分区表</font></li><li>MBR分区表中,第一个扇区最重要,里面有:<br>(1)主要开机区(Master boot record)及分区表(partition table) MBR 占有446bytes 而 partition table 占有 64bytes</li><li>GPT分区表除了分区数量扩展开了</li></ul><p>所有的磁盘文件名已经被模拟成<br>/dev/sd[a-p][1-128]<br>/dev/vd[a-d][1-128]</p><p>文件系统特性</p><p>superblock: 记录filesystem 的整体信息,包括inode/block的总量、使用量、剩余量,及文件系统的格式和相关信息等</p><p><img src="http://q1ika11wl.bkt.clouddn.com/43753889_p0.jpg" alt></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="Linux-磁盘与文件系统管理"><a href="#Linux-磁盘与文件系统管理" class="headerlink" title="Linux 磁盘与文件系统管理"></a><strong>Linux 磁盘与文件系统管理</strong></h3><p>磁盘的组成<br>圆形的磁盘盘(主要记录数据的部分)<br>机械手臂,与在机械手臂上的磁盘读取头(可擦写磁盘盘上的数据)<br>主轴马达,可以转动磁盘盘</p><a id="more"></a><p>磁盘盘的组成</p><ul><li>扇区(Sector)为最小的物理储存单位,目前主要有 512bytes 与4K 两张格式.</li><li>将扇区组成一个圆,那就是磁柱;</li><li>早期的分区主要是以磁柱为最小分区单位,现在的分区通常使用扇区为最小分区单位(每一个扇区都有号码)</li><li>磁盘的分区表主要有两种格式,一个是限制较多的<font color="red">MBR分区表</font>,一种是较新且限制较少的<font color="red">GPT分区表</font></li><li>MBR分区表中,第一个扇区最重要,里面有:<br>(1)主要开机区(Master boot record)及分区表(partition table) MBR 占有446bytes 而 partition table 占有 64bytes</li><li>GPT分区表除了分区数量扩展开了</li></ul><p>所有的磁盘文件名已经被模拟成<br>/dev/sd[a-p][1-128]<br>/dev/vd[a-d][1-128]</p><p>mbr分区<br>1.最多支持四个主分区<br>2.系统只能安装在主分区<br>3.扩展分区要占一个主分区<br>4.mbr最大只支持2tb</p><p>gpt分区<br>1.支持无限多个主分区<br>2.最大支持18EB的大容量(EB=1024PB,PB=1024TB)<br>3.windows7 64位以后支持gpt</p><p>文件系统特性</p><p>superblock: 记录filesystem 的整体信息,包括inode/block的总量、使用量、剩余量,及文件系统的格式和相关信息等</p><p><img src="http://q1ika11wl.bkt.clouddn.com/43753889_p0.jpg" alt></p>]]></content>
       
       
       
