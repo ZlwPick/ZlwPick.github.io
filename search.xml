@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>JAVA算法中笔记</title>
+      <link href="/2020/03/02/JAVA%E7%AE%97%E6%B3%95%E4%B8%AD%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/03/02/JAVA%E7%AE%97%E6%B3%95%E4%B8%AD%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>最近写算法时,遇到的一些问题,及其优化都总结在此篇.</p><a id="more"></a><h1 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = new Scanner (System.in);//基本方法</span><br><span class="line">Scanner in = new Scanner (new BufferedInputStream(System.in));//更快</span><br></pre></td></tr></table></figure><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));//使用缓存加速，比直接使用System.out快</span><br><span class="line">out.println(n); </span><br><span class="line">out.printf(&quot;%.2f\n&quot;, ans); // 与c语言中printf用法相同</span><br></pre></td></tr></table></figure><h1 id="大数据与高精度"><a href="#大数据与高精度" class="headerlink" title="大数据与高精度"></a>大数据与高精度</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.math.BigInteger; </span><br><span class="line">//主要有以下方法可以使用： </span><br><span class="line">BigInteger add(BigInteger other) </span><br><span class="line">BigInteger subtract(BigInteger other) </span><br><span class="line">BigInteger multiply(BigInteger other) </span><br><span class="line">BigInteger divide(BigInteger other)</span><br><span class="line">BigInteger [] dividedandRemainder(BigInteger other) //数组第一位是商，第二位是余数</span><br><span class="line">BigInteger pow(int other)// other次方</span><br><span class="line">BigInteger mod(BigInteger other) </span><br><span class="line">BigInteger gcd(BigInteger other) </span><br><span class="line">int compareTo(BigInteger other) //负数则小于,0则等于,正数则大于</span><br><span class="line">static BigInteger valueOf(long x)</span><br><span class="line">//输出数字时直接使用 System.out.println(a) 即可</span><br></pre></td></tr></table></figure><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal add(BigDecimal other)</span><br><span class="line">BigDecimal subtract(BigDecimal other)</span><br><span class="line">BigDecimal multiply(BigDecimal other)</span><br><span class="line">BigDecimal divide(BigDecimal other)</span><br><span class="line">BigDecimal divide(BigDecimal divisor, int scale, BigDecimal.ROUND_HALF_UP)//除数，保留小数位数，保留方法四舍五入</span><br><span class="line">BigDecimal.setScale()方法用于格式化小数点 //setScale(1)表示保留一位小数，默认用四舍五入方式</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Redis 笔记1</title>
       <link href="/2020/02/26/Redis-%E7%AC%94%E8%AE%B01/"/>
       <url>/2020/02/26/Redis-%E7%AC%94%E8%AE%B01/</url>
